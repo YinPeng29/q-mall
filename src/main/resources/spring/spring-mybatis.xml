@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/tx
+                            http://www.springframework.org/schema/tx/spring-tx.xsd
+                            http://www.springframework.org/schema/context
+                            http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/aop
+                            http://www.springframework.org/schema/aop/spring-aop.xsd
+                            http://www.springframework.org/schema/cache
+                            http://www.springframework.org/schema/cache/spring-cache.xsd
+                            http://www.springframework.org/schema/mvc
+                            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- 引用注解-->
+    <context:component-scan base-package="com.bays"></context:component-scan>
+
+    <!-- 关联jdbc.properties-->
+    <context:property-placeholder location="classpath:jdbc.properties,classpath:mail.properties,classpath:token.properties" ignore-unresolvable="true" />
+
+    <!-- 配置数据源 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}"></property>
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+        <!--不自动提交事务-->
+        <property name="defaultAutoCommit" value="false" />
+        <!--定义最大连接数-->
+        <property name="maxActive" value="20" />
+        <!--定义初始连接数-->
+        <property name="initialSize" value="1" />
+        <!--定义最长等待时间-->
+        <property name="maxWait" value="60000" />
+        <!--定义最小空闲-->
+        <property name="minIdle" value="1" />
+        <!--定义最大空闲-->
+        <property name="maxIdle" value="20" />
+
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="300000" />
+
+        <!--验证数据库连接有效性 http://blog.csdn.net/ruiruiafafafa/article/details/51546187-->
+        <property name="validationQuery" value="SELECT 1" />
+
+        <!-- 一般不开启后两项 https://m.aliyun.com/yunqi/ask/22104 -->
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+
+        <!--提升数据库性能 PSCache-->
+        <property name="poolPreparedStatements" value="true" />
+        <!--要启用PSCache值必须大于0 尽量大一点 例如100 -->
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="50" />
+    </bean>
+
+    <!-- mybatis和spring完美整合，不需要mybatis的配置映射文件 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"></property>
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
+        <property name="typeAliasesPackage" value="com.bays.model"></property>
+        <!--开启mybatis 对缓存的配置-->
+        <property name="configurationProperties">
+            <props>
+                <!--cacheEnabled:true 是开启缓存的关键所在-->
+                <prop key="cacheEnabled">true</prop>
+                <prop key="lazyLoadingEnabled">false</prop>
+                <prop key="aggressiveLazyLoading">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- 生成dao代理對象 这里没有配置好的话注解找不到对象 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+        <property name="basePackage" value="com.bays.dao"></property>
+    </bean>
+
+    <!--持久化访问模板的工具-->
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg ref="sqlSessionFactory" />
+    </bean>
+
+    <!--配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <!-- 启动对@AspectJ注解的支持 -->
+    <aop:aspectj-autoproxy proxy-target-class="true" />
+
+    <!-- 配置事务切面Bean,指定事务管理器 拦截器方式配置事务 ??? -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="delete*" propagation="REQUIRED" read-only="false" rollback-for="java.lang.Exception" />
+            <tx:method name="update*" propagation="REQUIRED" read-only="false" rollback-for="java.lang.Exception" />
+            <tx:method name="save*" propagation="REQUIRED" read-only="false" rollback-for="java.lang.Exception" />
+            <tx:method name="batch*" propagation="REQUIRED" read-only="false" rollback-for="java.lang.Exception" />
+        </tx:attributes>
+    </tx:advice>
+    <!-- Service aop 切面????? -->
+    <aop:config>
+        <aop:pointcut id="pc" expression="execution(* com.bays.service.*Service.*(..))" />
+        <aop:advisor pointcut-ref="pc" advice-ref="txAdvice" />
+    </aop:config>
+
+</beans>
