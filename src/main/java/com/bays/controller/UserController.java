@@ -39,6 +39,7 @@ public class UserController extends ResponseHandle{
     @Value("${mail.sender.account}")
     private String myEmail;
 
+    // 上传测试
     @RequestMapping("all")
     public String findAll(){
         List<Map> all = userService.findAll();
