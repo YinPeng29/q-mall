@@ -6,7 +6,8 @@
 
         <display-name>Archetype Created Web Application</display-name>
         <welcome-file-list>
-                <welcome-file>index.jsp</welcome-file>
+                <!--<welcome-file>index.jsp</welcome-file>-->
+                <welcome-file>index.html</welcome-file>
         </welcome-file-list>
 
         <!--配置servlet 核心-->
@@ -23,6 +24,10 @@
         <servlet-mapping>
                 <servlet-name>springMVC</servlet-name>
                 <url-pattern>/</url-pattern>
+        </servlet-mapping>
+        <servlet-mapping>
+                <servlet-name>default</servlet-name>
+                <url-pattern>*.html</url-pattern>
         </servlet-mapping>
 
         <!--上下文参数mybatis配置和redis配置-->

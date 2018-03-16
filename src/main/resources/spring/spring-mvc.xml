@@ -71,13 +71,17 @@
     <mvc:resources mapping="/js/**" location="statics/js/"/>
     <mvc:resources mapping="/image/**" location="statics/image/"/>
     <mvc:resources mapping="/plugins/**" location="statics/plugins/"/>
+    <mvc:resources mapping="/json/**" location="statics/json/"/>
+    <mvc:resources mapping="/plugins/**" location="statics/layui/"/>
+    <mvc:resources mapping="/page/**" location="statics/page/"/>
 
 
     <!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
     <bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/WEB-INF/views/"/><!--设置JSP文件的目录位置-->
-        <property name="suffix" value=".jsp"/>
+        <!--<property name="suffix" value=".jsp"/>-->
+        <property name="suffix" value=".html"/>
     </bean>
 
     <!-- springmvc文件上传需要配置的节点-->
