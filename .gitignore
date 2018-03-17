@@ -1,5 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
-/.idea/
-/Q-Mall.iml
-/target/
-/.idea/workspace.xml
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
