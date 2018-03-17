@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bays.dao.UserMapper">
+    <!--<cache type=""></cache>-->
+    <resultMap  id="resultUser" type="com.bays.model.User">
+        <id column="id" property="id"></id>
+        <result column="user_id" property="userId"></result>
+        <result column="user_name" property="userName"></result>
+        <result column="password" property="passWord"></result>
+        <result column="email" property="email"></result>
+        <result column="status" property="status"></result>
+        <result column="add_time" property="addTime"></result>
+        <result column="latest_login_time" property="latest_login_time"></result>
+        <result column="UUID" property="uuid"></result>
+    </resultMap>
+
+    <select id="findAll" resultType="java.util.Map">
+      select * from user_info
+    </select>
+
+    <insert id="insert">
+        insert into user_info(user_id,user_name,password,email,status,add_time,UUID) values (#{user.userId},#{user.userName},#{user.passWord},
+        #{user.email},#{user.status},#{user.addTime},#{user.uuid})
+    </insert>
+
+    <select id="selectUser"  resultMap="resultUser" parameterType="com.bays.model.User">
+        SELECT * FROM user_info WHERE user_name=#{user.userName} and password=#{user.passWord}
+    </select>
+
+    <select id="selectOneUser" resultMap="resultUser" parameterType="java.lang.String">
+        SELECT user_name,add_time,UUID FROM user_info WHERE user_id=#{userId} and UUID=#{uuid} and status = '0'
+    </select>
+
+    <select id="findUserByName" resultType="java.util.Map">
+        SELECT * FROM user_info WHERE  user_name = #{username}
+    </select>
+
+    <update id="updateStatus">
+        update user_info SET status=#{status} WHERE user_id = #{userId} and UUID=#{uuid}
+    </update>
+
+</mapper>
