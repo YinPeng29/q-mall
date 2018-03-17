@@ -6,359 +6,292 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4007e04b-d638-4dab-9c5a-f93f28ff6560" name="Default" comment="个性化设置">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/controller/UserController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/dao/UserMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/model/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/service/token/TokenService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/service/token/impl/TokenServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/service/user/UserService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/service/user/impl/UserServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/DateTool.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/Field$Cloumn.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/Field$Common.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/Field$Table.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/Field.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/JwtBuilder/JwtBuilder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/MD5Tool.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/MailUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/PageTool.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/ResponseHandle.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/ReturnCode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/SysUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/bays/utils/redisTool/RedisUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/interceptor/LoginInterceptor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/controller/UserController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/dao/UserMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/model/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/service/token/TokenService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/service/token/impl/TokenServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/service/user/UserService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/service/user/impl/UserServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/DateTool.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/Field$Cloumn.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/Field$Common.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/Field$Table.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/Field.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/JwtBuilder/JwtBuilder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/MD5Tool.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/MailUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/PageTool.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/ResponseHandle.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/ReturnCode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/SysUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/redisTool/RedisUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/interceptor/LoginInterceptor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/activation-1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/aopalliance-1.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/aspectjrt-1.8.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/aspectjweaver-1.8.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/c3p0-0.9.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/c3p0-0.9.5.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-beanutils-1.8.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-codec-1.9.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-collections-3.2.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-dbcp-1.2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-dbcp2-2.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-fileupload-1.3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-io-2.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-lang-2.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-logging-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-pool-1.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-pool2-2.4.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/druid-1.0.13.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/ezmorph-1.0.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/fastjson-1.2.12.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/gson-2.6.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jackson-annotations-2.8.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jackson-core-2.8.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jackson-databind-2.8.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jedis-2.9.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/json-20160212.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/json-lib-2.4-jdk15.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jsqlparser-0.9.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jstl-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/log4j-1.2.16.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/mail-1.4.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/mchange-commons-java-0.2.10.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/mybatis-3.3.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/mybatis-spring-1.2.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/mysql-connector-java-5.1.44.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/pagehelper-4.1.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/quartz-2.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/servlet-api-2.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/slf4j-api-1.6.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/slf4j-log4j12-1.6.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-aop-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-beans-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-context-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-context-support-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-core-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-data-redis-1.6.2.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-expression-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-jdbc-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-oxm-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-test-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-tx-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-web-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-webmvc-4.1.1.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/images/alipay.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/images/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/images/code.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/images/face.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/images/userface1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/images/userface2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/images/userface3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/images/userface4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/images/userface5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/images/wechat.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/laydate/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/icon-ext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/loading-0.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/loading-1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/loading-2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/font/iconfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/font/iconfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/font/iconfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/0.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/10.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/11.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/12.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/13.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/14.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/15.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/16.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/17.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/18.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/19.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/20.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/21.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/22.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/23.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/24.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/25.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/26.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/27.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/28.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/29.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/30.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/31.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/32.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/33.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/34.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/35.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/36.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/37.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/38.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/39.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/40.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/41.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/42.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/43.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/44.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/45.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/46.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/47.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/48.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/49.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/50.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/51.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/52.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/53.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/54.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/55.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/56.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/57.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/58.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/59.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/60.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/61.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/62.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/63.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/64.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/65.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/66.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/67.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/68.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/69.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/70.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/71.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/8.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/9.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/login/login.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mail.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserInfoMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/redis.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/spring-mybatis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/spring-redis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/token.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/mail.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/mybatis/mapper/UserInfoMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/mybatis/mybatis-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/redis.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/spring/spring-mvc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/spring/spring-mybatis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/spring/spring-redis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/token.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/views/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/views/login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/css/images.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/css/login.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/css/message.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/css/news.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/css/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/css/user.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/js/bodyTab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/js/leftNav.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/json/images.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/json/linksList.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/json/message.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/json/navs.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/json/newsList.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/json/systemParameter.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/json/userface.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/json/usersList.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/css/layui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/css/layui.mobile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/code.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/laydate/laydate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/layer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/font/iconfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/dest/layui.all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/code.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/element.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/flow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/laydate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/layedit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/layer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/laypage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/laytpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/mobile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/tree.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/upload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/layui/layui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/img/images.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/img/images.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/links/linksAdd.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/links/linksAdd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/links/linksList.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/links/linksList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/login/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/login/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/message/message.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/message/message.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/message/messageReply.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/news/newsAdd.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/news/newsAdd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/news/newsList.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/news/newsList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/systemParameter/systemParameter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/systemParameter/systemParameter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/user/addUser.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/user/addUser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/user/address.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/user/allUsers.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/user/allUsers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/user/changePwd.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/user/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/page/user/userInfo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qmall/statics/plugins/jquery-1.5.1.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/Q_Mall_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/Q_Mall_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__c3p0_c3p0_0_9_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_1_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_7_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_44.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20160212.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_2_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_1_6_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/statics/page/user/userInfo.html" afterPath="$PROJECT_DIR$/src/main/webapp/statics/page/user/userInfo.html" />
+    <list default="true" id="4007e04b-d638-4dab-9c5a-f93f28ff6560" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/controller/UserController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/dao/UserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/model/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/service/token/TokenService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/service/token/impl/TokenServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/service/user/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/service/user/impl/UserServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/DateTool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/Field$Cloumn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/Field$Common.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/Field$Table.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/Field.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/JwtBuilder/JwtBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/MD5Tool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/MailUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/PageTool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/ResponseHandle.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/ReturnCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/SysUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bays/utils/redisTool/RedisUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/interceptor/LoginInterceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mail.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserInfoMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/redis.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/spring-mybatis.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/spring-redis.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/token.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/controller/UserController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/dao/UserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/model/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/service/token/TokenService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/service/token/impl/TokenServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/service/user/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/service/user/impl/UserServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/DateTool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/Field$Cloumn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/Field$Common.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/Field$Table.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/Field.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/JwtBuilder/JwtBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/MD5Tool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/MailUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/PageTool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/ResponseHandle.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/ReturnCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/SysUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/bays/utils/redisTool/RedisUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/com/interceptor/LoginInterceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/mail.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/mybatis/mapper/UserInfoMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/mybatis/mybatis-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/redis.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/spring/spring-mvc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/spring/spring-mybatis.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/spring/spring-redis.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/classes/token.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/activation-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/aspectjrt-1.8.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/aspectjweaver-1.8.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/c3p0-0.9.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/c3p0-0.9.5.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-beanutils-1.8.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-codec-1.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-collections-3.2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-dbcp-1.2.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-dbcp2-2.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-fileupload-1.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-lang-2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-pool-1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/commons-pool2-2.4.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/druid-1.0.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/ezmorph-1.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/fastjson-1.2.12.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/gson-2.6.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jackson-annotations-2.8.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jackson-core-2.8.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jackson-databind-2.8.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jedis-2.9.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/json-20160212.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/json-lib-2.4-jdk15.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jsqlparser-0.9.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/log4j-1.2.16.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/mail-1.4.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/mchange-commons-java-0.2.10.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/mybatis-3.3.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/mybatis-spring-1.2.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/mysql-connector-java-5.1.44.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/pagehelper-4.1.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/quartz-2.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/servlet-api-2.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/slf4j-api-1.6.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/slf4j-log4j12-1.6.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-aop-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-beans-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-context-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-context-support-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-core-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-data-redis-1.6.2.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-expression-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-jdbc-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-oxm-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-test-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-tx-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-web-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/lib/spring-webmvc-4.1.1.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/views/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/views/login.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/css/images.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/css/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/css/message.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/css/news.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/css/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/css/user.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/images/alipay.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/images/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/images/code.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/images/face.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/images/userface1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/images/userface2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/images/userface3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/images/userface4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/images/userface5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/images/wechat.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/js/bodyTab.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/js/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/js/leftNav.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/json/images.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/json/linksList.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/json/message.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/json/navs.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/json/newsList.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/json/systemParameter.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/json/userface.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/json/usersList.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/css/layui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/css/layui.mobile.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/code.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/laydate/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/laydate/laydate.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/icon-ext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/layer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/loading-0.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/loading-1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/css/modules/layer/default/loading-2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/font/iconfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/font/iconfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/font/iconfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/font/iconfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/0.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/10.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/11.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/12.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/13.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/14.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/15.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/17.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/18.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/19.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/20.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/21.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/22.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/23.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/24.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/25.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/26.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/27.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/28.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/29.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/30.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/31.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/32.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/33.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/34.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/35.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/36.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/37.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/38.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/39.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/4.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/40.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/41.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/42.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/43.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/44.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/45.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/46.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/47.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/48.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/49.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/50.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/51.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/52.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/53.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/54.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/55.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/56.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/57.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/58.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/59.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/6.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/60.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/61.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/62.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/63.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/64.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/65.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/66.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/67.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/68.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/69.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/7.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/70.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/71.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/8.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/images/face/9.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/dest/layui.all.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/code.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/element.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/flow.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/laydate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/layedit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/layer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/laypage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/laytpl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/mobile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/tree.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/upload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/lay/modules/util.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/layui/layui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/img/images.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/img/images.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/links/linksAdd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/links/linksAdd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/links/linksList.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/links/linksList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/login/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/login/login.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/login/login.mp4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/main.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/message/message.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/message/message.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/message/messageReply.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/news/newsAdd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/news/newsAdd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/news/newsList.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/news/newsList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/systemParameter/systemParameter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/systemParameter/systemParameter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/user/addUser.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/user/addUser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/user/address.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/user/allUsers.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/user/allUsers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/user/changePwd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/user/user.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/page/user/userInfo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qmall/statics/plugins/jquery-1.5.1.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -411,11 +344,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userInfo.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userInfo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/statics/page/user/userInfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+            <state relative-caret-position="187">
+              <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -474,9 +417,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/statics/js/bodyTab.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/statics/js/index.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/statics/json/systemParameter.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/statics/page/user/userInfo.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -625,7 +568,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors..ignore files" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -919,7 +862,7 @@
       <workItem from="1521125596365" duration="1856000" />
       <workItem from="1521214552904" duration="5557000" />
       <workItem from="1521257812168" duration="411000" />
-      <workItem from="1521258307907" duration="2614000" />
+      <workItem from="1521258307907" duration="2879000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1520870742463</created>
@@ -977,15 +920,21 @@
       <option name="project" value="LOCAL" />
       <updated>1521260757246</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="个性化设置">
+      <created>1521261139927</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1521261139927</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13271000" />
+    <option name="totallyTimeSpent" value="13536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="23" width="1514" height="829" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1001,7 +950,7 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21659635" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5302391" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3895921" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1009,9 +958,9 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21659635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45288327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45288327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4838256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20393811" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21195652" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1289,42 +1238,42 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521261096000" expanded="true" signature="105121:105163" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105121:105181" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105121:105194" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105121:105209" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105244:107393" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105257:107378" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105311:105606" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105330:105591" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105393:105571" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105433:105537" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105454:105515" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105656:105983" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105675:105968" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105770:105948" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105810:105914" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="105831:105892" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106034:106299" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106053:106284" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106086:106264" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106126:106230" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106147:106208" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106342:106648" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106361:106633" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106435:106613" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106475:106579" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106496:106557" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106699:107047" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106718:107032" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106795:107012" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106835:106978" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="106856:106956" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="107099:107364" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="107118:107349" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="107151:107329" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="107191:107295" ph="..." />
-            <marker date="1521261096000" expanded="true" signature="107212:107273" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105121:105163" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105121:105181" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105121:105194" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105121:105209" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="66427:66702" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="66427:66687" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105311:105606" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105330:105591" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105393:105571" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105433:105537" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105454:105515" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105656:105983" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105675:105968" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105770:105948" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105810:105914" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="105831:105892" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106034:106299" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106053:106284" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106086:106264" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106126:106230" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106147:106208" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106342:106648" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106361:106633" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106435:106613" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106475:106579" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106496:106557" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106699:107047" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106718:107032" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106795:107012" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106835:106978" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="106856:106956" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="66427:66673" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="66427:66658" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="66460:66638" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="66500:66604" ph="..." />
+            <marker date="1521261355000" expanded="true" signature="66521:66582" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1430,14 +1379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/statics/page/user/address.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1910">
@@ -1472,8 +1413,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/statics/page/user/userInfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+        <state relative-caret-position="187">
+          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1484,10 +1433,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>Q-Mall:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1495,7 +1446,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1543,6 +1494,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
