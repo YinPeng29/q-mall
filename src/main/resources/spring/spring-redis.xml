@@ -22,7 +22,7 @@
 
     <context:property-placeholder location="classpath:redis.properties" ignore-unresolvable="true"></context:property-placeholder>
     <!--数据库配置 poolConfig-->
-    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
         <property name="maxIdle" value="${redis.maxIdle}"></property>
         <property name="minIdle" value="${redis.minIdle}"></property>
         <property name="maxTotal" value="${redis.maxTotal}"></property>
@@ -30,26 +30,34 @@
         <property name="testOnBorrow" value="${redis.testOnBorrow}"></property>
     </bean>
     <!--连接redis-->
-    <bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
-        <property name="hostName" value="${redis.host}"></property>
-        <property name="port" value="${redis.port}"></property>
-        <property name="password" value="${redis.password}"></property>
-        <!--指向数据库配置bean-->
-        <property name="poolConfig" ref="poolConfig"></property>
+    <!--<bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">-->
+    <!--<property name="hostName" value="${redis.host}"></property>-->
+    <!--<property name="port" value="${redis.port}"></property>-->
+    <!--<property name="password" value="${redis.password}"></property>-->
+    <!--&lt;!&ndash;指向数据库配置bean&ndash;&gt;-->
+    <!--<property name="poolConfig" ref="jedisPoolConfig"></property>-->
+    <!--</bean>-->
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool" destroy-method="destroy" depends-on="jedisPoolConfig">
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
+        <constructor-arg name="host" value="${redis.host}"></constructor-arg>
+        <constructor-arg name="port" value="${redis.port}"></constructor-arg>
+        <constructor-arg name="timeout" value="${redis.timeout}"></constructor-arg>
+        <constructor-arg name="password" value="${redis.password}"></constructor-arg>
+        <constructor-arg name="database" value="${redis.db.index}" type="int" />
     </bean>
 
-    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" p:connectionFactory-ref="connectionFactory">
-        <!--针对各种数据进行格式化-->
-        <property name="keySerializer">
-            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"></bean>
-        </property>
-        <property name="valueSerializer">
-            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"></bean>
-        </property>
-        <property name="hashKeySerializer">
-            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"></bean>
-        </property>
-    </bean>
+    <!--<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" p:connectionFactory-ref="jedisConnectionFactory">-->
+    <!--&lt;!&ndash;针对各种数据进行格式化&ndash;&gt;-->
+    <!--<property name="keySerializer">-->
+    <!--<bean class="org.springframework.data.redis.serializer.StringRedisSerializer"></bean>-->
+    <!--</property>-->
+    <!--<property name="valueSerializer">-->
+    <!--<bean class="org.springframework.data.redis.serializer.StringRedisSerializer"></bean>-->
+    <!--</property>-->
+    <!--<property name="hashKeySerializer">-->
+    <!--<bean class="org.springframework.data.redis.serializer.StringRedisSerializer"></bean>-->
+    <!--</property>-->
+    <!--</bean>-->
 
 
 </beans>

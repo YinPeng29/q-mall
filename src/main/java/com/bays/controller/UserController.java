@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import redis.clients.jedis.JedisPool;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -39,8 +40,12 @@ public class UserController extends ResponseHandle{
     @Value("${mail.sender.account}")
     private String myEmail;
 
+    @Autowired
+    private JedisPool jedisPool;
+
     @RequestMapping("all")
     public String findAll(){
+//        System.out.println("jedis: "+jedisPool.getResource().toString());
         List<Map> all = userService.findAll();
         logger.info("index 运行成功..."+all.toString());
         long time = 60*60*24*1000;
