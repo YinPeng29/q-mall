@@ -1,22 +1,30 @@
 package com.bays.utils.redisTool;
 
-import java.util.List;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 
-public interface RedisUtil<H,K,V> {
-    //增
-    void add(K key,String value);
-    void addObj(H objectKey,K key,V object);
+public class RedisUtil {
+    private JedisPool jedisPool;
+    private Jedis jedis;
+    public RedisUtil(JedisPool jedisPool) {
+        this.jedisPool = jedisPool;
+    }
 
-    //删
-    void delete(K key);
-    void delete(List<K> listKeys);
-    void deleteObj(H objectKey,K key);
+    public String set(String key,String value){
+       try{
+           if(jedisPool!=null){
+               jedis = jedisPool.getResource();
+               return jedis.set(key,value);
+           }else {
+               return null;
+           }
+       }finally {
+           returnResource(jedis);
+       }
 
-    //改
-    void update(K key,String value);
-    void update(H objectKey,K key,V object);
+    }
 
-    //查
-    String get(K key);
-    V getObject(H objectKey,K key);
+    private void returnResource(Jedis jedis){
+        jedis.close();
+    }
 }

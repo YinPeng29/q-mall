@@ -7,6 +7,7 @@ import com.bays.utils.MailUtil;
 import com.bays.utils.ResponseHandle;
 import com.bays.utils.ReturnCode;
 import com.bays.utils.SysUtil;
+import com.bays.utils.redisTool.RedisUtil;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,12 +41,11 @@ public class UserController extends ResponseHandle{
     @Value("${mail.sender.account}")
     private String myEmail;
 
-    @Autowired
-    private JedisPool jedisPool;
-
     @RequestMapping("all")
     public String findAll(){
 //        System.out.println("jedis: "+jedisPool.getResource().toString());
+//        RedisUtil redisUtil = new RedisUtil(jedisPool);
+//        redisUtil.set("yin","peng");
         List<Map> all = userService.findAll();
         logger.info("index 运行成功..."+all.toString());
         long time = 60*60*24*1000;
