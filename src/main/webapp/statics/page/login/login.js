@@ -13,9 +13,19 @@ layui.config({
 		}
 	}).resize();
 	
-	//登录按钮事件
-	form.on("submit(login)",function(data){
-		window.location.href = "../../index.html";
-		return false;
-	})
-})
+	登录按钮事件
+	// form.on("submit(login)",function(data){
+	// 	// window.location.href = "../../index.html";
+	// 	layer.alert("123");
+     //    $.ajax({
+     //        type: "POST",//方法类型
+     //        dataType: "json",//预期服务器返回的数据类型
+     //        url: "/user/login" ,//url
+     //        data: $('#form1').serialize(),
+     //        success: function(resp){
+     //            alert("123");
+     //        }
+     //    });
+	// })
+
+});

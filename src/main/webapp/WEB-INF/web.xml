@@ -6,11 +6,42 @@
 
         <display-name>Archetype Created Web Application</display-name>
         <welcome-file-list>
-                <!--<welcome-file>index.jsp</welcome-file>-->
-                <welcome-file>index.html</welcome-file>
+                <welcome-file>index.jsp</welcome-file>
+                <!--<welcome-file>index.html</welcome-file>-->
         </welcome-file-list>
 
         <!--配置servlet 核心-->
+        <!--<servlet-mapping>-->
+                <!--<servlet-name>default</servlet-name>-->
+                <!--<url-pattern>*.css</url-pattern>-->
+        <!--</servlet-mapping>-->
+
+        <!--<servlet-mapping>-->
+                <!--<servlet-name>default</servlet-name>-->
+                <!--<url-pattern>*.gif</url-pattern>-->
+
+        <!--</servlet-mapping>-->
+
+        <!--<servlet-mapping>-->
+                <!--<servlet-name>default</servlet-name>-->
+                <!--<url-pattern>*.jpg</url-pattern>-->
+        <!--</servlet-mapping>-->
+
+        <!--<servlet-mapping>-->
+                <!--<servlet-name>default</servlet-name>-->
+                <!--<url-pattern>*.js</url-pattern>-->
+        <!--</servlet-mapping>-->
+
+        <!--<servlet-mapping>-->
+                <!--<servlet-name>default</servlet-name>-->
+                <!--<url-pattern>*.json</url-pattern>-->
+        <!--</servlet-mapping>-->
+
+        <!--<servlet-mapping>-->
+                <!--<servlet-name>default</servlet-name>-->
+                <!--<url-pattern>*.mp4</url-pattern>-->
+        <!--</servlet-mapping>-->
+
         <servlet>
                 <servlet-name>springMVC</servlet-name>
                 <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

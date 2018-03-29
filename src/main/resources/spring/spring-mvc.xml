@@ -66,14 +66,17 @@
 
     <!--HandlerMapping 无需配置，springmvc可以默认启动-->
     <mvc:default-servlet-handler/>
+
     <!--对于静态文件的访问-->
-    <mvc:resources mapping="/css/**" location="statics/css/"/>
-    <mvc:resources mapping="/js/**" location="statics/js/"/>
-    <mvc:resources mapping="/image/**" location="statics/image/"/>
-    <mvc:resources mapping="/plugins/**" location="statics/plugins/"/>
-    <mvc:resources mapping="/json/**" location="statics/json/"/>
-    <mvc:resources mapping="/plugins/**" location="statics/layui/"/>
-    <mvc:resources mapping="/page/**" location="statics/page/"/>
+    <!--<mvc:resources mapping="/statics/**" location="/statics/"/>-->
+    <mvc:resources location="/statics/css/" mapping="/css/**" />
+    <mvc:resources location="/statics/images/" mapping="/images/**" />
+    <mvc:resources location="/statics/js/" mapping="/js/**" />
+    <mvc:resources location="/statics/json/" mapping="/json/**" />
+    <mvc:resources location="/statics/layui/" mapping="/layui/**" />
+    <mvc:resources location="/statics/page/" mapping="/page/**" />
+    <mvc:resources location="/statics/plugins/" mapping="/plugins/**" />
+    <!--<mvc:resources location="/statics/*/" mapping="/*.ico" />-->
 
 
     <!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
@@ -94,40 +97,15 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <!--默认拦截的链接-->
-            <mvc:mapping path="/*"/>
+            <mvc:mapping path="/**"/>
             <!--不拦截的链接-->
-            <mvc:exclude-mapping path="/login" />
+            <mvc:exclude-mapping path="/statics/**/*"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/js/**/*"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/*/**/*.json"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/*.ico"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/user/login"></mvc:exclude-mapping>
             <bean class="com.interceptor.LoginInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
-
-    <!--加载mail配置文件-->
-    <!--<bean id="mailConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
-        <!--<property name="locations">-->
-            <!--<list>-->
-                <!--<value>classpath:mail.properties</value>-->
-            <!--</list>-->
-        <!--</property>-->
-    <!--</bean>-->
-    <!--<bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage">-->
-        <!--<property name="from" value="${mail_from}" />-->
-    <!--</bean>-->
-    <!--<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">-->
-        <!--<property name="defaultEncoding" value="UTF-8"></property>-->
-        <!--<property name="host" value="${mail_host}"></property>-->
-        <!--<property name="username" value="${mail_username}"></property>-->
-        <!--<property name="password" value="${mail_password}"></property>-->
-        <!--<property name="javaMailProperties">-->
-            <!--<props>-->
-                <!--&lt;!&ndash;设置认证开关&ndash;&gt;-->
-                <!--<prop key="mail.smtp.auth">true</prop>-->
-                <!--&lt;!&ndash;启动调试开关&ndash;&gt;-->
-                <!--<prop key="mail.debug">true</prop>-->
-                <!--&lt;!&ndash;设置发送延时&ndash;&gt;-->
-                <!--<prop key="mail.smtp.timeout">0</prop>-->
-            <!--</props>-->
-        <!--</property>-->
-    <!--</bean>-->
-    <!--mail 配置结束-->
 
 </beans>

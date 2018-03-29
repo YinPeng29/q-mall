@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import redis.clients.jedis.JedisPool;
 
@@ -41,7 +42,8 @@ public class UserController extends ResponseHandle{
     @Value("${mail.sender.account}")
     private String myEmail;
 
-    @RequestMapping("all")
+    @ResponseBody
+    @RequestMapping("/info")
     public String findAll(){
 //        System.out.println("jedis: "+jedisPool.getResource().toString());
 //        RedisUtil redisUtil = new RedisUtil(jedisPool);
@@ -57,14 +59,17 @@ public class UserController extends ResponseHandle{
             e.printStackTrace();
         }
         System.out.println("tokenInfo: "+ tokenInfo+" emailAccount: "+ myEmail);
-        return "login";
+        return "hello world";
     }
 
     @RequestMapping(value = "/login",method= RequestMethod.POST)
     @ResponseBody
-    public String login(User user,HttpServletRequest request){
+    public String login(User user, HttpServletRequest request){
+        String userName = request.getParameter("userName");
+        String passWord = request.getParameter("passWord");
         User user1 = userService.selectUser(user);
         if(user1 != null){
+            System.out.println(this.setResponse(ReturnCode.SUCCESS).toJSONString());
             return this.setResponse(ReturnCode.SUCCESS).toJSONString();
         }
         return this.setResponse(ReturnCode.LOGIN_FAIL).toJSONString();
