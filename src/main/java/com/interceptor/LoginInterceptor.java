@@ -10,12 +10,13 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
         System.out.println("最先进入拦截器，preHandle");
         System.out.println(request.getRequestURL());
-        Object user = request.getSession().getAttribute("user");
-        if(user !=null){
-            return true;
-        }
-        response.sendRedirect("/login.html");
-        return false;
+//        Object user = request.getSession().getAttribute("user");
+//        if(user !=null){
+//            return true;
+//        }
+//        response.sendRedirect("/login.html");
+//        return false;
+        return true;
     }
 
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object o, ModelAndView modelAndView) throws Exception {
