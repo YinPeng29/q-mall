@@ -9,68 +9,89 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="format-detection" content="telephone=no">
-
 	<link rel="stylesheet" href="/statics/layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="item.css" media="all" />
 </head>
-<form class="layui-form">
+<body>
+<div class="item-class" style="margin-top: 15px">
+	<form class="layui-form" id="item_form1">
+		<div class="layui-form-item">
+			<label class="layui-form-label">品牌</label>
+			<div class="layui-input-block">
+				<input type="text" name="logo" required  lay-verify="required" placeholder="请输入品牌" autocomplete="off" class="layui-input">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">服饰名称</label>
+			<div class="layui-input-block">
+				<input type="text" name="name" required  lay-verify="required" placeholder="服饰名称" autocomplete="off" class="layui-input">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">类型</label>
+			<div class="layui-input-block">
+				<select name="type" lay-verify="required">
+					<option value=""></option>
+					<option value="0">外套</option>
+					<option value="1">打底衫</option>
+					<option value="2">裤子直筒</option>
+					<option value="3">裤子小脚</option>
+					<option value="4">鞋子</option>
+				</select>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">尺寸选择</label>
+			<div class="layui-input-block">
+				<input type="checkbox" name="like[write]" value="S" title="S">
+				<input type="checkbox" name="like[read]" value="M" title="M" checked>
+				<input type="checkbox" name="like[dai]" value="L" title="L">
+				<input type="checkbox" name="like[dai]" value="XL" title="XL">
+				<input type="checkbox" name="like[dai]" value="XXL" title="XXL">
+				<input type="checkbox" name="like[dai]" value="XXXL" title="XXXL">
+				<input type="checkbox" name="like[dai]" value="XXXXL" title="XXXXL">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">上架</label>
+			<div class="layui-input-block">
+				<input type="checkbox" name="isOnline" lay-text="上架|下架" lay-skin="switch"/>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">单选框</label>
+			<div class="layui-input-block">
+				<input type="radio" name="sex" value="0" title="男">
+				<input type="radio" name="sex" value="1" title="女" checked>
+				<input type="radio" name="sex" value="2" title="中性" checked>
+			</div>
+		</div>
+		<div class="layui-form-item layui-form-text">
+			<label class="layui-form-label">商品介绍</label>
+			<div class="layui-input-block">
+				<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">上传图片</label>
+			<div class="layui-input-block">
+				<input type="file" name="file_name" class="layui-upload-file">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<div class="layui-input-block">
+				<img src="file:///E:/pic/dog.jpg" width="120" height="140" />
+				<!--<img src="ftp://192.168.1.139/dog.jpg"  width="120" height="140"/>-->
+				<!--<img src="ftp://192.168.1.139/dog.jpg"  width="120" height="140"/>-->
+			</div>
+		</div>
+
+	</form>
 	<div class="layui-form-item">
-		<label class="layui-form-label">输入框</label>
 		<div class="layui-input-block">
-			<input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+			<button class="layui-btn" lay-submit="" lay-filter="addNews" onclick="itemAdd()">立即提交</button>
+			<button type="reset" class="layui-btn layui-btn-primary">重置</button>
 		</div>
-	</div>
-	<div class="layui-form-item">
-		<label class="layui-form-label">密码框</label>
-		<div class="layui-input-inline">
-			<input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
-		</div>
-		<div class="layui-form-mid layui-word-aux">辅助文字</div>
-	</div>
-	<div class="layui-form-item">
-		<label class="layui-form-label">选择框</label>
-		<div class="layui-input-block">
-			<select name="city" lay-verify="required">
-				<option value=""></option>
-				<option value="0">北京</option>
-				<option value="1">上海</option>
-				<option value="2">广州</option>
-				<option value="3">深圳</option>
-				<option value="4">杭州</option>
-			</select>
-		</div>
-	</div>
-	<div class="layui-form-item">
-		<label class="layui-form-label">复选框</label>
-		<div class="layui-input-block">
-			<input type="checkbox" name="like[write]" title="写作">
-			<input type="checkbox" name="like[read]" title="阅读" checked>
-			<input type="checkbox" name="like[dai]" title="发呆">
-		</div>
-	</div>
-	<div class="layui-form-item">
-		<label class="layui-form-label">开关</label>
-		<div class="layui-input-block">
-			<input type="checkbox" name="switch" lay-skin="switch">
-		</div>
-	</div>
-	<div class="layui-form-item">
-		<label class="layui-form-label">单选框</label>
-		<div class="layui-input-block">
-			<input type="radio" name="sex" value="男" title="男">
-			<input type="radio" name="sex" value="女" title="女" checked>
-		</div>
-	</div>
-	<div class="layui-form-item layui-form-text">
-		<label class="layui-form-label">文本域</label>
-		<div class="layui-input-block">
-			<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
-		</div>
-	</div>
-</form>
-<div class="layui-form-item">
-	<div class="layui-input-block">
-		<button class="layui-btn" lay-submit="" lay-filter="addNews" onclick="itemAdd()">立即提交</button>
-		<button type="reset" class="layui-btn layui-btn-primary">重置</button>
 	</div>
 </div>
 </body>
@@ -79,33 +100,53 @@
 
 <!--<script type="text/javascript" src="newsAdd.js"></script>-->
 <script type="text/javascript">
-    var form,layer,laypage,roleTable,laytpl,newTable;
+    var form,layer;
     window.onload=function () {
         //按需加载
         initlayui();
     };
 
     function initlayui(){
-        layui.use(['layer','form','table'], function(){
+        layui.use(['layer','form','upload'], function(){
             layer = layui.layer;
-            form = layui.form;
+            form = layui.form();
+
+            layui.upload({
+                url: '上传接口url'
+                ,success: function(res){
+                    console.log(res); //上传成功返回值，必须为json格式
+                }
+            });
+
+            form.on('checkbox', function(data){
+                console.log(data.elem); //得到checkbox原始DOM对象
+                console.log(data.elem.checked); //是否被选中，true或者false
+                console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+                console.log(data.othis); //得到美化后的DOM对象
+//				layer.alert(data.elem)
+            });
+            form.on('switch',function(data){
+               console.log(data.elem);
+               console.log(data.elem.checked);
+			});
+
         });
-	}
+    }
 
     function itemAdd(){
         $.ajax({
-            type: "post",//方法类型
+        	type: "post",//方法类型
             dataType: "json",//预期服务器返回的数据类型
             url: "/item/additem",//url
             async:false,
-            data: {"title":"123"},
+        	data:$("#item_form1").serialize(),
             success: function(data){
-                layer.alert(data.respcode);
-            },
-            error:function(data){
-                layer.alert(data.respmsg);
-            }
-        });
+            layer.alert(data.respcode);
+        },
+        error:function(data){
+            layer.alert(data.respmsg);
+        }
+    });
     }
 </script>
 </html>

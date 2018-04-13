@@ -19,6 +19,7 @@ public class ItemController extends ResponseHandle {
     @ResponseBody
     @RequestMapping(value = "/additem")
     public String addItem(HttpServletRequest request){
+        String logo = request.getParameter("logo");
         System.out.println("respmsg: "+this.setResponse(ReturnCode.SUCCESS).toJSONString());
         JSONObject json = new JSONObject();
         json.put("respcode","0000");
