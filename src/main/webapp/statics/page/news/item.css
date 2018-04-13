@@ -1,0 +1,10 @@
+
+.item-class{
+    width: 70%;
+    /*margin: 0 auto;*/
+}
+
+.layui-input-block {
+    margin-left: 110px;
+    min-height: 36px;
+}
