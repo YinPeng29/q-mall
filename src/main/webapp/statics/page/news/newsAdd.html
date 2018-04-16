@@ -16,6 +16,12 @@
 <div class="item-class" style="margin-top: 15px">
 	<form class="layui-form" id="item_form1">
 		<div class="layui-form-item">
+			<label class="layui-form-label">货号</label>
+			<div class="layui-input-block">
+				<input type="text" name="number" required  lay-verify="required" placeholder="请输入品牌" autocomplete="off" class="layui-input">
+			</div>
+		</div>
+		<div class="layui-form-item">
 			<label class="layui-form-label">品牌</label>
 			<div class="layui-input-block">
 				<input type="text" name="logo" required  lay-verify="required" placeholder="请输入品牌" autocomplete="off" class="layui-input">
@@ -43,13 +49,13 @@
 		<div class="layui-form-item">
 			<label class="layui-form-label">尺寸选择</label>
 			<div class="layui-input-block">
-				<input type="checkbox" name="like[write]" value="S" title="S">
-				<input type="checkbox" name="like[read]" value="M" title="M" checked>
-				<input type="checkbox" name="like[dai]" value="L" title="L">
-				<input type="checkbox" name="like[dai]" value="XL" title="XL">
-				<input type="checkbox" name="like[dai]" value="XXL" title="XXL">
-				<input type="checkbox" name="like[dai]" value="XXXL" title="XXXL">
-				<input type="checkbox" name="like[dai]" value="XXXXL" title="XXXXL">
+				<input type="checkbox" name="size[S]" value="S" title="S">
+				<input type="checkbox" name="size[M]" value="M" title="M" checked>
+				<input type="checkbox" name="size[L]" value="L" title="L">
+				<input type="checkbox" name="size[XL]" value="XL" title="XL">
+				<input type="checkbox" name="size[XXL]" value="XXL" title="XXL">
+				<input type="checkbox" name="size[XXXL]" value="XXXL" title="XXXL">
+				<input type="checkbox" name="size[XXXXL]" value="XXXXL" title="XXXXL">
 			</div>
 		</div>
 		<div class="layui-form-item">
@@ -66,6 +72,12 @@
 				<input type="radio" name="sex" value="2" title="中性" checked>
 			</div>
 		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">价格</label>
+			<div class="layui-input-block">
+				<input type="text" name="price" required  lay-verify="required" placeholder="服饰名称" autocomplete="off" class="layui-input">
+			</div>
+		</div>
 		<div class="layui-form-item layui-form-text">
 			<label class="layui-form-label">商品介绍</label>
 			<div class="layui-input-block">
@@ -80,7 +92,7 @@
 		</div>
 		<div class="layui-form-item">
 			<div class="layui-input-block">
-				<img src="file:///E:/pic/dog.jpg" width="120" height="140" />
+				<img src="/statics/itemImages/lufei.jpg" width="115" height="120" />
 				<!--<img src="ftp://192.168.1.139/dog.jpg"  width="120" height="140"/>-->
 				<!--<img src="ftp://192.168.1.139/dog.jpg"  width="120" height="140"/>-->
 			</div>

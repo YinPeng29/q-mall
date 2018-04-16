@@ -1,6 +1,7 @@
 package com.bays.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.bays.model.itemInfo;
 import com.bays.utils.ResponseHandle;
 import com.bays.utils.ReturnCode;
 import org.slf4j.Logger;
@@ -18,7 +19,8 @@ public class ItemController extends ResponseHandle {
 
     @ResponseBody
     @RequestMapping(value = "/additem")
-    public String addItem(HttpServletRequest request){
+    public String addItem(itemInfo itemInfo, HttpServletRequest request){
+        System.out.println(itemInfo.toString());
         String logo = request.getParameter("logo");
         System.out.println("respmsg: "+this.setResponse(ReturnCode.SUCCESS).toJSONString());
         JSONObject json = new JSONObject();

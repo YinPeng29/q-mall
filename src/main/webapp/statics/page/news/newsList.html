@@ -38,7 +38,9 @@
 	</div>
 </blockquote>
 <div class="layui-form news_list">
-	<table id="itemList" lay-filter="itemList_filter"></table>
+	<table id="itemTable" lay-filter="itemList_filter">
+
+	</table>
 </div>
 <div id="page"></div>
 <script type="text/javascript" src="../../layui2.2/layui.js"></script>
@@ -49,6 +51,32 @@
 	<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
 	<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
+<script type="text/javascript">
+//    layui.use(['layer','table'], function(){
+//        var table = layui.table,
+//            layer = layui.layer,
+//			$ = layui.jquery;
 
+        //第一个实例
+//        table.render({
+//            elem: '#itemTable'
+//            ,height: 315
+//            ,url: '' //数据接口
+//            ,page: true //开启分页
+//            ,cols: [[ //表头
+//                {field: 'id', title: 'ID', width:100, sort: true, fixed: 'left'}
+//                ,{field: 'username', title: '用户名', width:220}
+//                ,{field: 'sex', title: '性别', width:150}
+//                ,{field: 'city', title: '城市', width:200}
+//                ,{field: 'sign', title: '签名', width: 200}
+//                ,{field: 'experience', title: '积分', width: 150}
+//                ,{field: 'score', title: '评分', width: 150}
+//                ,{field: 'wealth', title: '财富', width: 150}
+//                ,{field: 'options',title:'操作',toolbar: '#barDemo',width: 480}
+//            ]]
+//        });
+
+//    });
+</script>
 </body>
 </html>

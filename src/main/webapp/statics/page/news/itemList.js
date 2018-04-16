@@ -34,19 +34,21 @@ layui.config({
     });
 
     table.render({
-        elem: '#itemList'
-//			,height: 315
+        elem: '#itemTable'
+        ,height: 315
         ,url: '' //数据接口
-        ,cellMinWidth: 50
         ,page: true //开启分页
         ,cols: [[ //表头
-            {field: 'id', title: '货号', sort: true,width:100, fixed: 'left'}
-            ,{field: 'username', title: '用户名',width:180}
-            ,{field: 'sex', title: '性别', sort: true,width:180}
-            ,{field: 'city', title: '城市',width:180}
-            ,{field: 'sign', title: '签名',width:180}
-            ,{fixed: 'option',title:'操作', toolbar: '#itemBar',width:280}
+             {type: 'checkbox',width:50,fixed: 'left'}
+            ,{field: 'number', title: '货号', width:150, sort: true, fixed: 'left'}
+            ,{field: 'logo', title: '品牌', width:200}
+            ,{field: 'name', title: '名称', width:250}
+            ,{field: 'type', title: '类型', width:150}
+            ,{field: 'size', title: '尺寸', width: 100}
+            ,{field: 'sex', title: '性别', width: 100}
+            ,{field: 'isOnline', title: '上架', width: 100}
+            ,{field: 'price', title: '价格', width: 150}
+            ,{field: 'options',title:'操作',toolbar: '#barDemo',width: 500}
         ]]
     });
-
 });
