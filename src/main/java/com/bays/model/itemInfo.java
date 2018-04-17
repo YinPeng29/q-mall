@@ -3,21 +3,21 @@ package com.bays.model;
 import java.io.Serializable;
 
 public class itemInfo implements Serializable {
-    private int id;
+    private String id;
     private String number;
     private String logo;
     private String name;
-    private int type;
-//    private String size;
-    private int is_online;
-    private int sex;
+    private String type;
+    private String size;
+    private String is_online;
+    private String sex;
     private String description;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -45,35 +45,35 @@ public class itemInfo implements Serializable {
         this.name = name;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 
-//    public String getSize() {
-//        return size;
-//    }
-//
-//    public void setSize(String size) {
-//        this.size = size;
-//    }
+    public String getSize() {
+        return size;
+    }
 
-    public int getIs_online() {
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getIs_online() {
         return is_online;
     }
 
-    public void setIs_online(int is_online) {
+    public void setIs_online(String is_online) {
         this.is_online = is_online;
     }
 
-    public int getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(int sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
@@ -93,7 +93,7 @@ public class itemInfo implements Serializable {
                 ", logo='" + logo + '\'' +
                 ", name='" + name + '\'' +
                 ", type=" + type +
-//                ", size='" + size + '\'' +
+                ", size='" + size + '\'' +
                 ", is_online=" + is_online +
                 ", sex=" + sex +
                 ", description='" + description + '\'' +

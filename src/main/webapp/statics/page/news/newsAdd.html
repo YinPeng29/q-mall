@@ -9,7 +9,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="/statics/layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="/statics/layui2.2/css/layui.css" media="all" />
 	<link rel="stylesheet" href="item.css" media="all" />
 </head>
 <body>
@@ -49,13 +49,13 @@
 		<div class="layui-form-item">
 			<label class="layui-form-label">尺寸选择</label>
 			<div class="layui-input-block">
-				<input type="checkbox" name="size[S]" value="S" title="S">
-				<input type="checkbox" name="size[M]" value="M" title="M" checked>
-				<input type="checkbox" name="size[L]" value="L" title="L">
-				<input type="checkbox" name="size[XL]" value="XL" title="XL">
-				<input type="checkbox" name="size[XXL]" value="XXL" title="XXL">
-				<input type="checkbox" name="size[XXXL]" value="XXXL" title="XXXL">
-				<input type="checkbox" name="size[XXXXL]" value="XXXXL" title="XXXXL">
+				<input type="checkbox" name="" value="S" title="S"/>
+				<input type="checkbox" name="" value="M" title="M"/>
+				<input type="checkbox" name="" value="L" title="L"/>
+				<input type="checkbox" name="" value="XL" title="XL"/>
+				<input type="checkbox" name="" value="XXL" title="XXL"/>
+				<input type="checkbox" name="" value="XXXL" title="XXXL"/>
+				<input type="checkbox" name="" value="XXXXL" title="XXXXL"/>
 			</div>
 		</div>
 		<div class="layui-form-item">
@@ -69,7 +69,7 @@
 			<div class="layui-input-block">
 				<input type="radio" name="sex" value="0" title="男">
 				<input type="radio" name="sex" value="1" title="女" checked>
-				<input type="radio" name="sex" value="2" title="中性" checked>
+				<input type="radio" name="sex" value="2" title="中性">
 			</div>
 		</div>
 		<div class="layui-form-item">
@@ -81,20 +81,22 @@
 		<div class="layui-form-item layui-form-text">
 			<label class="layui-form-label">商品介绍</label>
 			<div class="layui-input-block">
-				<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+				<textarea name="description" placeholder="请输入内容" class="layui-textarea"></textarea>
 			</div>
 		</div>
 		<div class="layui-form-item">
 			<label class="layui-form-label">上传图片</label>
-			<div class="layui-input-block">
-				<input type="file" name="file_name" class="layui-upload-file">
+			<div class="layui-upload">
+				<button type="button" class="layui-btn" id="itemPic">上传图片</button>
 			</div>
 		</div>
 		<div class="layui-form-item">
-			<div class="layui-input-block">
-				<img src="/statics/itemImages/lufei.jpg" width="115" height="120" />
-				<!--<img src="ftp://192.168.1.139/dog.jpg"  width="120" height="140"/>-->
-				<!--<img src="ftp://192.168.1.139/dog.jpg"  width="120" height="140"/>-->
+			<label class="layui-form-label"></label>
+			<div class="layui-upload-list" style="float: left;">
+				<img class="layui-upload-img" id="demo1" width="110" height="100">
+			</div>
+			<div style="float: left;height: 100px;">
+				<p id="demoText"></p>
 			</div>
 		</div>
 
@@ -107,12 +109,16 @@
 	</div>
 </div>
 </body>
-<script type="text/javascript" src="/statics/layui/layui.js"></script>
+<script type="text/javascript" src="/statics/layui2.2/layui.js"></script>
 <script type="text/javascript" src="/statics/plugins/jquery-3.2.1.min.js"></script>
 
 <!--<script type="text/javascript" src="newsAdd.js"></script>-->
 <script type="text/javascript">
-    var form,layer;
+    var form,layer,upload;
+    var sizeList = [];
+    var isOnline="";
+    //	var sex="";
+
     window.onload=function () {
         //按需加载
         initlayui();
@@ -121,44 +127,107 @@
     function initlayui(){
         layui.use(['layer','form','upload'], function(){
             layer = layui.layer;
-            form = layui.form();
+            upload = layui.upload;
+            form = layui.form;
+//			$ = layui.jquery;
 
-            layui.upload({
-                url: '上传接口url'
-                ,success: function(res){
-                    console.log(res); //上传成功返回值，必须为json格式
+            var uploadInst = upload.render({
+                elem: '#itemPic'
+                ,url: ''
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#demo1').attr('src', result); //图片链接（base64）
+                    });
+                }
+                ,done: function(res){
+                    //如果上传失败
+                    if(res.code > 0){
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    var demoText = $('#demoText');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span><a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
                 }
             });
 
+            /**
+             * 衣服尺码
+             */
             form.on('checkbox', function(data){
-                console.log(data.elem); //得到checkbox原始DOM对象
                 console.log(data.elem.checked); //是否被选中，true或者false
                 console.log(data.value); //复选框value值，也可以通过data.elem.value得到
-                console.log(data.othis); //得到美化后的DOM对象
-//				layer.alert(data.elem)
+                if(data.elem.checked){
+                    sizeList.push(data.elem.value);
+                    layer.msg("添加"+data.elem.value+" "+sizeList.length);
+                }else{
+                    for(var i in sizeList){
+                        if(sizeList[i] == data.elem.value){
+                            sizeList.splice(i,1);  //移除数组元素
+                        }
+                    }
+                }
             });
-            form.on('switch',function(data){
-               console.log(data.elem);
-               console.log(data.elem.checked);
-			});
 
+            /**
+             * 是否上架
+             */
+            form.on('switch',function(data){  //上架 1： 下架 : 2
+                console.log(data.elem);
+                console.log(data.elem.checked);
+                if(data.elem.checked){
+                    isOnline = "1";
+                    layer.msg(isOnline);
+                }else{
+                    isOnline = "0";
+                    layer.msg(isOnline);
+                }
+
+            });
+
+//			/**
+//			 * 商品属性 男，女，中性
+//			 */
+//			form.on('radio', function(data){
+//				console.log(data.value); //被点击的radio的value值
+//				sex = data.value;
+//				layer.msg(sex); //男:0 女:1 中性:2
+//			});
         });
     }
 
+    //	$.param()
     function itemAdd(){
+        //参数拼接
+		var size = "";
+		for(var i in sizeList){
+		    size = size + sizeList[i] + ",";
+		}
+		var sizeStr = size.substring(0,size.length-1);
+        var param = $.param({"is_online":isOnline,"size":sizeStr}) + "&"
+            +$("#item_form1").serialize();
         $.ajax({
-        	type: "post",//方法类型
+            type: "post",//方法类型
             dataType: "json",//预期服务器返回的数据类型
             url: "/item/additem",//url
+			traditional:true,
             async:false,
-        	data:$("#item_form1").serialize(),
+            data:param,
             success: function(data){
-            layer.alert(data.respcode);
-        },
-        error:function(data){
-            layer.alert(data.respmsg);
-        }
-    });
+                if(data.respcode == "0000"){
+                    layer.alert(data.respmsg);
+				}
+            },
+            error:function(data){
+                layer.alert(data.respmsg);
+            }
+        });
     }
 </script>
 </html>

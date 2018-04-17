@@ -28,4 +28,8 @@ public class ResponseHandle {
         json.put(Field.Common.DATAS,data);
         return json;
     }
+    public String toJsonString(Object obj){
+        net.sf.json.JSONObject json = net.sf.json.JSONObject.fromObject(obj);
+        return json.toString();
+    }
 }

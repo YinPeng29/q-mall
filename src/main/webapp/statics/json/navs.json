@@ -4,8 +4,23 @@
 	"href" : "/static/page/main.html",
 	"spread" : false
 },{
+	"title" : "订单管理",
+	"icon" : "&#xe63c;",
+	"href" : "/statics/page/news/newsList.html",
+	"spread" : false
+},{
+	"title" : "会员信息",
+	"icon" : "&#xe613;",
+	"href" : "/statics/page/news/newsList.html",
+	"spread" : false
+},{
 	"title" : "商品管理",
 	"icon" : "icon-text",
+	"href" : "/statics/page/news/newsList.html",
+	"spread" : false
+},{
+	"title" : "用户管理",
+	"icon" : "&#xe612;",
 	"href" : "/statics/page/news/newsList.html",
 	"spread" : false
 },{
