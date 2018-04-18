@@ -36,7 +36,7 @@ layui.config({
 
     table.render({
         elem: '#itemTable'
-        ,height: 315
+        ,height: 685
         ,url: '/item/queryItem' //数据接口
         ,page: true //开启分页
         ,cols: [[ //表头
