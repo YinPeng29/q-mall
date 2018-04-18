@@ -1,5 +1,7 @@
 package com.bays.utils;
 
+import com.alibaba.fastjson.JSONObject;
+
 public enum ReturnCode {
 
     //TODO： 工具类 全局返回信息完善
@@ -34,5 +36,12 @@ public enum ReturnCode {
 
     public void setMsg(String Msg) {
         this.Msg = Msg;
+    }
+
+    public JSONObject toJsonObject(JSONObject jsonObject){
+        if(jsonObject==null) jsonObject = new JSONObject();
+        jsonObject.put(Field.Common.RESP_CODE,Code);
+        jsonObject.put(Field.Common.RESP_MSG,Msg);
+        return jsonObject;
     }
 }

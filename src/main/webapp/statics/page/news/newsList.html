@@ -47,36 +47,17 @@
 <script type="text/javascript" src="itemList.js"></script>
 
 <script type="text/html" id="itemBar">
-	<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-	<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-	<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+	<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="detail">查看</a>
+	<a class="layui-btn layui-btn-sm" lay-event="edit">编辑</a>
+	<a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">删除</a>
+</script>
+
+<script type="text/html" id="checkboxTpl">
+	<input type="checkbox" name="lock" value="{{d.id}}" title="上架" lay-filter="lock_user"
+		   {{d.is_online == 1 ? 'checked' : '' }} />
 </script>
 <script type="text/javascript">
-//    layui.use(['layer','table'], function(){
-//        var table = layui.table,
-//            layer = layui.layer,
-//			$ = layui.jquery;
 
-        //第一个实例
-//        table.render({
-//            elem: '#itemTable'
-//            ,height: 315
-//            ,url: '' //数据接口
-//            ,page: true //开启分页
-//            ,cols: [[ //表头
-//                {field: 'id', title: 'ID', width:100, sort: true, fixed: 'left'}
-//                ,{field: 'username', title: '用户名', width:220}
-//                ,{field: 'sex', title: '性别', width:150}
-//                ,{field: 'city', title: '城市', width:200}
-//                ,{field: 'sign', title: '签名', width: 200}
-//                ,{field: 'experience', title: '积分', width: 150}
-//                ,{field: 'score', title: '评分', width: 150}
-//                ,{field: 'wealth', title: '财富', width: 150}
-//                ,{field: 'options',title:'操作',toolbar: '#barDemo',width: 480}
-//            ]]
-//        });
-
-//    });
 </script>
 </body>
 </html>

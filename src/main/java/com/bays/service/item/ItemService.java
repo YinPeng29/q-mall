@@ -1,7 +1,10 @@
 package com.bays.service.item;
 
-import com.bays.model.itemInfo;
+import java.util.List;
+import java.util.Map;
 
 public interface ItemService {
-    int addItem(itemInfo itemInfo);
+    int addItem(ItemInfo itemInfo);
+    int updateItem(ItemInfo itemInfo);
+    List<Map> queryItem();
 }

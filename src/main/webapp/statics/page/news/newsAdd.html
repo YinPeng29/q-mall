@@ -205,27 +205,32 @@
     //	$.param()
     function itemAdd(){
         //参数拼接
-		var size = "";
-		for(var i in sizeList){
-		    size = size + sizeList[i] + ",";
+        var size = "";
+        for(var i in sizeList){
+            size = size + sizeList[i] + ",";
+        }
+        if(isOnline == ""){
+            isOnline = "0";
 		}
-		var sizeStr = size.substring(0,size.length-1);
+        var sizeStr = size.substring(0,size.length-1);
         var param = $.param({"is_online":isOnline,"size":sizeStr}) + "&"
             +$("#item_form1").serialize();
         $.ajax({
             type: "post",//方法类型
             dataType: "json",//预期服务器返回的数据类型
             url: "/item/additem",//url
-			traditional:true,
+            traditional:true,
             async:false,
             data:param,
-            success: function(data){
-                if(data.respcode == "0000"){
-                    layer.alert(data.respmsg);
-				}
+            success: function(resp){
+                if(resp.respcode == "0000"){
+                    $("#itemId").val(resp.itemId);
+                    console.log($("#itemId").val());
+                    layer.alert(resp.respmsg);
+                }
             },
-            error:function(data){
-                layer.alert(data.respmsg);
+            error:function(resp){
+                layer.alert(resp.respmsg);
             }
         });
     }

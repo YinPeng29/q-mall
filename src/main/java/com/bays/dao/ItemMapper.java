@@ -1,7 +1,9 @@
 package com.bays.dao;
-import com.bays.model.itemInfo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by yinpeng on 2018/4/17.
@@ -12,6 +14,8 @@ public interface ItemMapper {
     /**
      * 添加商品
      */
-    int addItem(@Param("item")itemInfo itemInfo);
+    int addItem(@Param("item")ItemInfo itemInfo);
+    int updateItem(@Param("item") ItemInfo itemInfo);
+    List<Map> queryItem();
 }
 
