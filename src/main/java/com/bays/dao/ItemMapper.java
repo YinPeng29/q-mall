@@ -1,4 +1,5 @@
 package com.bays.dao;
+import com.bays.model.ItemInfo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,7 @@
 package com.bays.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.bays.model.ItemInfo;
 import com.bays.service.item.ItemService;
 import com.bays.utils.ResponseHandle;
 import com.bays.utils.ReturnCode;

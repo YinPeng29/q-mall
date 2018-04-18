@@ -1,5 +1,7 @@
 package com.bays.service.item;
 
+import com.bays.model.ItemInfo;
+
 import java.util.List;
 import java.util.Map;
 

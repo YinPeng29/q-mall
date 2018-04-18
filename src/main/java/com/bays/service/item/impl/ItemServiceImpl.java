@@ -1,6 +1,7 @@
 package com.bays.service.item.impl;
 
 import com.bays.dao.ItemMapper;
+import com.bays.model.ItemInfo;
 import com.bays.service.item.ItemService;
 import com.bays.utils.SysUtil;
 import org.springframework.beans.factory.annotation.Autowired;
