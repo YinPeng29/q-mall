@@ -37,18 +37,17 @@ layui.config({
     table.render({
         elem: '#itemTable'
         ,height: 685
-        ,url: '/item/queryItem' //数据接口
+        ,url: '' //数据接口
         ,page: true //开启分页
         ,cols: [[ //表头
             {type: 'checkbox',width:50,fixed: 'left'}
-            ,{field: 'item_number', title: '货号', width:150, sort: true}
+            ,{field: 'order_number', title: '订单编号', width:200, sort: true}
             ,{field: 'logo', title: '品牌', width:200}
-            ,{field: 'name', title: '名称', width:250}
-            ,{field: 'type', title: '类型', width:120}
-            ,{field: 'sex', title: '性别', width: 120}
-            ,{field: 'size', title: '尺寸', width: 280}
+            ,{field: 'name', title: '货品名称', width:280}
+            ,{field: 'date', title: '订单日期', width: 210}
             ,{field: 'price', title: '价格￥', width: 150}
-            ,{field: 'is_online', title: '上架', width: 120,templet: '#checkboxTpl', unresize: true}
+            ,{field: 'vipId', title: '会员ID', width: 180}
+            ,{field: 'status', title: '订单状态', width:150}
             ,{field: 'options',title:'操作',toolbar: '#itemBar',width: 250}
         ]],
         request:{pageName: 'curr'},

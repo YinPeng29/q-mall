@@ -23,7 +23,7 @@
     <!--启用spring的一些annotation -->
     <context:annotation-config></context:annotation-config>
 
-    <context:property-placeholder location="classpath:mail.properties,classpath:token.properties" ignore-unresolvable="true" />
+    <context:property-placeholder location="classpath:mail.properties,classpath:token.properties,classpath:globalConfig.properties" ignore-unresolvable="true" />
 
     <!-- 配置注解驱动 可以将request参数与绑定到controller参数上 -->
     <mvc:annotation-driven>

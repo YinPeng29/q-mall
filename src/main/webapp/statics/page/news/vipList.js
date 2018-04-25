@@ -37,19 +37,18 @@ layui.config({
     table.render({
         elem: '#itemTable'
         ,height: 685
-        ,url: '/item/queryItem' //数据接口
+        ,url: '' //数据接口
         ,page: true //开启分页
         ,cols: [[ //表头
             {type: 'checkbox',width:50,fixed: 'left'}
-            ,{field: 'item_number', title: '货号', width:150, sort: true}
-            ,{field: 'logo', title: '品牌', width:200}
-            ,{field: 'name', title: '名称', width:250}
+            ,{field: 'item_number', title: '会员ID', width:150, sort: true}
+            ,{field: 'tel', title: '手机号', width: 200}
+            ,{field: 'logo', title: '邮箱', width:250}
             ,{field: 'type', title: '类型', width:120}
             ,{field: 'sex', title: '性别', width: 120}
-            ,{field: 'size', title: '尺寸', width: 280}
-            ,{field: 'price', title: '价格￥', width: 150}
-            ,{field: 'is_online', title: '上架', width: 120,templet: '#checkboxTpl', unresize: true}
-            ,{field: 'options',title:'操作',toolbar: '#itemBar',width: 250}
+            ,{field: 'level', title: '等级', width:120}
+            ,{field: 'address', title: '地址', width:320}
+            ,{field: 'options',title:'操作',toolbar: '#itemBar',width: 320}
         ]],
         request:{pageName: 'curr'},
         page: true, //是否显示分页

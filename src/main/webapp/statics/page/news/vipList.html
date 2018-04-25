@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>文章列表--layui后台管理模板</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/statics/layui2.2/css/layui.css" media="all" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
+    <link rel="stylesheet" href="../../css/news.css" media="all" />
+</head>
+<body class="childrenBody">
+<blockquote class="layui-elem-quote news_search">
+    <div class="layui-inline">
+        <div class="layui-input-inline">
+            <input type="text" value="" placeholder="请输入关键字" class="layui-input search_input">
+        </div>
+        <a class="layui-btn search_btn">查询</a>
+    </div>
+    <!--<div class="layui-inline">-->
+        <!--<a class="layui-btn layui-btn-normal newsAdd_btn">添加会员</a>-->
+    <!--</div>-->
+    <!--<div class="layui-inline">-->
+        <!--<a class="layui-btn recommend" style="background-color:#5FB878">推荐文章</a>-->
+    <!--</div>-->
+    <!--<div class="layui-inline">-->
+        <!--<a class="layui-btn audit_btn">审核文章</a>-->
+    <!--</div>-->
+    <!--<div class="layui-inline">-->
+        <!--<a class="layui-btn layui-btn-danger batchDel">批量删除</a>-->
+    <!--</div>-->
+    <div class="layui-inline">
+        <div class="layui-form-mid layui-word-aux">本页面刷新后除新添加的文章外所有操作无效，关闭页面所有数据重置</div>
+    </div>
+</blockquote>
+<div class="layui-form news_list">
+    <table id="itemTable" lay-filter="itemList_filter">
+
+    </table>
+</div>
+<div id="page"></div>
+<script type="text/javascript" src="../../layui2.2/layui.js"></script>
+<script type="text/javascript" src="vipList.js"></script>
+
+<script type="text/html" id="itemBar">
+    <a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-sm" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">删除</a>
+</script>
+
+<script type="text/html" id="checkboxTpl">
+    <input type="checkbox" name="lock" value="{{d.id}}" title="上架" lay-filter="lock_user"
+           {{d.is_online == 1 ? 'checked' : '' }} />
+</script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

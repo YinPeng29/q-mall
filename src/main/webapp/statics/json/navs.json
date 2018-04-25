@@ -6,12 +6,12 @@
 },{
 	"title" : "订单管理",
 	"icon" : "&#xe63c;",
-	"href" : "/statics/page/news/newsList.html",
+	"href" : "/statics/page/news/orderList.html",
 	"spread" : false
 },{
 	"title" : "会员信息",
 	"icon" : "&#xe613;",
-	"href" : "/statics/page/news/newsList.html",
+	"href" : "/statics/page/news/vipList.html",
 	"spread" : false
 },{
 	"title" : "商品管理",
@@ -21,7 +21,7 @@
 },{
 	"title" : "用户管理",
 	"icon" : "&#xe612;",
-	"href" : "/statics/page/news/newsList.html",
+	"href" : "/statics/page/news/userList.html",
 	"spread" : false
 },{
 	"title" : "友情链接",
@@ -48,7 +48,7 @@
 		{
 			"title" : "登录",
 			"icon" : "&#xe609;",
-			"href" : "/statics/page/login/login.html",
+			"href" : "/login.html",
 			"spread" : false,
 			"target" : "_blank"
 		}
