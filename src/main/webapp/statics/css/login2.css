@@ -10,7 +10,7 @@ body{overflow:hidden;}
 	height: 0px;
 	width: 0px;
 	/*background: #D6E9C6;*/
-	background-color:rgba(188, 198, 198, 0.56);
+	background-color:rgba(190, 204, 225, 0.47);
 	color: white;
 	text-align: center;
 	line-height: 40px;
@@ -161,3 +161,14 @@ body{overflow:hidden;}
 	height: 300px;
 	border-bottom: 1px solid #FFFFFF;
 }
+div#form_container2 input,#form_container1 input{
+	border-radius: 4px;
+}
+/*div#form_container1 input{*/
+	/*height: 46px;*/
+/*}*/
+div#form_container2 input{
+	height: 41px;
+}
+
+

@@ -48,7 +48,7 @@
 		{
 			"title" : "登录",
 			"icon" : "&#xe609;",
-			"href" : "/login.html",
+			"href" : "../../login2.html",
 			"spread" : false,
 			"target" : "_blank"
 		}
