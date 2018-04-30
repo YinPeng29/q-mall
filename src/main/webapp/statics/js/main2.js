@@ -33,7 +33,7 @@
 		cartime = setInterval(function(){
 			i >= 5 ? i = 0 : i++;
 			slide(i);
-		},5000);
+		},2500);
 	}
 	car();
 	// 鼠标悬停

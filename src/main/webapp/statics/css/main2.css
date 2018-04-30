@@ -182,7 +182,7 @@ input:focus {
 			.sidenav-list {
 				position: relative;
 				padding: 15px 0;
-				background: rgba(0,0,0,.6);
+				background: rgba(0, 0, 0, 0.81);
 			}
 				.side-item > a {
 					position: relative;
@@ -1045,4 +1045,14 @@ input:focus {
 	height: 80px;
 	background: url(../images/slogan2016.png) no-repeat center 30px;
 	background-color: #f5f5f5;
+}
+
+.carousel-inner img{
+	height: 430px;
+	width: 993px;
+	margin-left: 233px;
+}
+.hot-promo img{
+	height: 170px;
+	width:316px;
 }

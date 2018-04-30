@@ -10,12 +10,12 @@ public enum ReturnCode {
     EXCEPTION("0002","EXCEPTION"),
     ERROR("0003","ERROR"),
 
-    LOGIN_FAIL("LOGIN_FAIL","用户名或密码错误"),
-    USER_EXISTS("USER_EXISTS","用户名已经存在"),
-    EMAIL_VALID("EMAIL_VALID","注册成功!请前往邮箱激活您的账户,有效期三天！"),
-    REGISTER_FALI("REGISTER_FALI","注册失败！！"),
+    LOGIN_FAIL("0004","用户名或密码错误"),
+    USER_EXISTS("0005","用户名已经存在"),
+    EMAIL_VALID("0006","注册成功!请前往邮箱激活您的账户,有效期三天！"),
+    REGISTER_FALI("0007","注册失败！！"),
 
-    ERROR_EMPTY_IMG("1001","文件为空");
+    ERROR_EMPTY_IMG("0008","文件为空");
 
     String Code;
     String Msg;

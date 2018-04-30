@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import redis.clients.jedis.JedisPool;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import java.util.Date;
 import java.util.List;
@@ -69,6 +70,9 @@ public class UserController extends ResponseHandle{
         String passWord = request.getParameter("passWord");
         User user1 = userService.selectUser(user);
         if(user1 != null){
+            HttpSession session = request.getSession();
+            session.setAttribute("user",userName);
+            session.setAttribute("isLogin",true);
             System.out.println(this.setResponse(ReturnCode.SUCCESS).toJSONString());
             return this.setResponse(ReturnCode.SUCCESS).toJSONString();
         }

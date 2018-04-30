@@ -7,7 +7,8 @@
         <display-name>Archetype Created Web Application</display-name>
         <welcome-file-list>
                 <!--<welcome-file>index.jsp</welcome-file>-->
-                <welcome-file>index.html</welcome-file>
+                <!--<welcome-file>index.html</welcome-file>-->
+                <welcome-file>main.html</welcome-file>
         </welcome-file-list>
 
         <!--配置servlet 核心-->
@@ -103,4 +104,28 @@
                 <filter-name>encodingFilter</filter-name>
                 <url-pattern>/*</url-pattern>
         </filter-mapping>
+
+        <filter>
+                <filter-name>LoginFilter</filter-name>
+                <filter-class>com.interceptor.LoginFilter</filter-class>
+                <init-param>
+                        <param-name>charset</param-name>
+                        <param-value>UTF-8</param-value>
+                </init-param>
+                <init-param>
+                        <param-name>contentType</param-name>
+                        <param-value>text/html;charset=UTF-8</param-value>
+                </init-param>
+        </filter>
+
+        <filter-mapping>
+                <filter-name>LoginFilter</filter-name>
+                <!-- 要拦截的哪一级目录 -->
+                <url-pattern>/item/*</url-pattern>
+        </filter-mapping>
+        <filter-mapping>
+                <filter-name>LoginFilter</filter-name>
+                <url-pattern>/index.html</url-pattern>
+        </filter-mapping>
+
 </web-app>

@@ -10,7 +10,7 @@ body{overflow:hidden;}
 	height: 0px;
 	width: 0px;
 	/*background: #D6E9C6;*/
-	background-color:rgba(190, 204, 225, 0.47);
+	background-color:rgba(219, 226, 236, 0.8);
 	color: white;
 	text-align: center;
 	line-height: 40px;
@@ -26,9 +26,11 @@ body{overflow:hidden;}
 	height: 0px;
 	width: 0px;
 	background: none;
-	color: white;
-	border-left: 1px solid white;
-	border-bottom: 1px solid white;
+	color: gray;
+	/*border-left: 1px solid white;*/
+	/*border-bottom: 1px solid white;*/
+	border-left: 1px;
+	border-bottom: 1px;
 	text-align: center;
 	line-height: 40px;
 	cursor: pointer;
@@ -162,7 +164,7 @@ body{overflow:hidden;}
 	border-bottom: 1px solid #FFFFFF;
 }
 div#form_container2 input,#form_container1 input{
-	border-radius: 4px;
+	border-radius: 3px;
 }
 /*div#form_container1 input{*/
 	/*height: 46px;*/

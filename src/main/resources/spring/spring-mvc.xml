@@ -101,10 +101,14 @@
             <mvc:mapping path="/**"/>
             <!--不拦截的链接-->
             <mvc:exclude-mapping path="/statics/**/*"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/statics/images/*"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/uploadImg/*.*"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/holder.js/*"></mvc:exclude-mapping>
             <mvc:exclude-mapping path="/js/**/*"></mvc:exclude-mapping>
             <mvc:exclude-mapping path="/*/**/*.json"></mvc:exclude-mapping>
             <mvc:exclude-mapping path="/*.ico"></mvc:exclude-mapping>
             <mvc:exclude-mapping path="/user/login"></mvc:exclude-mapping>
+
             <bean class="com.interceptor.LoginInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
