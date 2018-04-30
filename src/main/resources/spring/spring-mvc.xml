@@ -76,6 +76,7 @@
     <mvc:resources location="/statics/layui/" mapping="/layui/**" />
     <mvc:resources location="/statics/page/" mapping="/page/**" />
     <mvc:resources location="/statics/plugins/" mapping="/plugins/**" />
+    <mvc:resources location="/statics/bootstrap/" mapping="/bootstrap/**" />
     <!--<mvc:resources location="/statics/*/" mapping="/*.ico" />-->
 
 
