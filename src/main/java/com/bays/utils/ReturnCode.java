@@ -14,8 +14,8 @@ public enum ReturnCode {
     USER_EXISTS("0005","用户名已经存在"),
     EMAIL_VALID("0006","注册成功!请前往邮箱激活您的账户,有效期三天！"),
     REGISTER_FALI("0007","注册失败！！"),
-
-    ERROR_EMPTY_IMG("0008","文件为空");
+    ERROR_EMPTY_IMG("0008","文件为空"),
+    FIRST_SAVE("0009","请先保存信息");
 
     String Code;
     String Msg;

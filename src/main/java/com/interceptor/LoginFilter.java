@@ -24,6 +24,7 @@ public class LoginFilter implements javax.servlet.Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
+        System.out.println("过滤器: "+req.getRequestURL());
         Object user = req.getSession().getAttribute("user");
         if(user!=null){
             filterChain.doFilter(req,resp);

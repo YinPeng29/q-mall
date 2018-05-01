@@ -15,6 +15,7 @@
 <body>
 <div class="item-class" style="margin-top: 15px">
 	<form class="layui-form" id="item_form1">
+		<input type="hidden" name="itemId" id="itemId" value="" />
 		<div class="layui-form-item">
 			<label class="layui-form-label">货号</label>
 			<div class="layui-input-block">
@@ -134,17 +135,25 @@
             var uploadInst = upload.render({
                 elem: '#itemPic'
                 ,url: '/item/uploadImg'
+//				,auto:false
+				,data:{"itemId":$("#itemId").val()}
                 ,before: function(obj){
+                    if($("#itemId").val() == ""){
+                        return false;
+					}
                     //预读本地文件示例，不支持ie8
                     obj.preview(function(index, file, result){
                         $('#demo1').attr('src', result); //图片链接（base64）
                     });
                 }
-                ,done: function(res){
+                ,done: function(resp){
                     //如果上传失败
-                    if(res.code > 0){
-                        return layer.msg('上传失败');
-                    }
+                    if(resp.respcode == "0000"){
+                        return layer.msg('上传成功');
+                    }else{
+                        layer.alert(resp.respmsg);
+                        return false;
+					}
                     //上传成功
                 }
                 ,error: function(){
@@ -224,9 +233,9 @@
             data:param,
             success: function(resp){
                 if(resp.respcode == "0000"){
-                    $("#itemId").val(resp.itemId);
+					$("#itemId").val(resp.itemId);
                     console.log($("#itemId").val());
-                    layer.alert(resp.respmsg);
+                    layer.alert(resp.respmsg+" "+ resp.itemId );
                 }
             },
             error:function(resp){

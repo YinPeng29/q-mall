@@ -5,7 +5,7 @@ import com.bays.model.ItemInfo;
 import com.bays.service.item.ItemService;
 import com.bays.utils.ResponseHandle;
 import com.bays.utils.ReturnCode;
-import org.apache.ibatis.annotations.Param;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,6 +58,10 @@ public class ItemController extends ResponseHandle {
     @ResponseBody
     @RequestMapping(value = "/uploadImg")
     public String uploadHeadImg(@RequestParam("file") MultipartFile file, HttpServletRequest request){
+        String itemId = request.getParameter("itemId");
+        if(StringUtils.isBlank(itemId)){
+            return setResponse(ReturnCode.FIRST_SAVE).toJSONString();
+        }
         String path = "";
         if(file.isEmpty()){
             return setResponse(ReturnCode.ERROR_EMPTY_IMG).toJSONString();
