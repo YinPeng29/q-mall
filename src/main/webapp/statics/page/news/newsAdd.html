@@ -15,7 +15,7 @@
 <body>
 <div class="item-class" style="margin-top: 15px">
 	<form class="layui-form" id="item_form1">
-		<input type="hidden" name="itemId" id="itemId" value="" />
+		<input type="hidden" name="itemId" id="itemId" value="177d8cd92a4740a09606610b9b99c7a6" />
 		<div class="layui-form-item">
 			<label class="layui-form-label">货号</label>
 			<div class="layui-input-block">
@@ -115,11 +115,11 @@
 
 <!--<script type="text/javascript" src="newsAdd.js"></script>-->
 <script type="text/javascript">
+    var itemId = 123;
     var form,layer,upload;
     var sizeList = [];
     var isOnline="";
     //	var sex="";
-
     window.onload=function () {
         //按需加载
         initlayui();
@@ -136,15 +136,21 @@
                 elem: '#itemPic'
                 ,url: '/item/uploadImg'
 //				,auto:false
-				,data:{"itemId":$("#itemId").val()}
+//				,data:{"itemId":$("#itemId").val()}
+                ,data: {
+                    itemId: function(){
+                        return $("#itemId").val();
+                    }
+                }
                 ,before: function(obj){
                     if($("#itemId").val() == ""){
                         return false;
-					}
-                    //预读本地文件示例，不支持ie8
-                    obj.preview(function(index, file, result){
-                        $('#demo1').attr('src', result); //图片链接（base64）
-                    });
+                    }else{
+                        //预读本地文件示例，不支持ie8
+                        obj.preview(function(index, file, result){
+                            $('#demo1').attr('src', result); //图片链接（base64）
+                        });
+                    }
                 }
                 ,done: function(resp){
                     //如果上传失败
@@ -153,7 +159,7 @@
                     }else{
                         layer.alert(resp.respmsg);
                         return false;
-					}
+                    }
                     //上传成功
                 }
                 ,error: function(){
@@ -220,7 +226,7 @@
         }
         if(isOnline == ""){
             isOnline = "0";
-		}
+        }
         var sizeStr = size.substring(0,size.length-1);
         var param = $.param({"is_online":isOnline,"size":sizeStr}) + "&"
             +$("#item_form1").serialize();
@@ -233,7 +239,7 @@
             data:param,
             success: function(resp){
                 if(resp.respcode == "0000"){
-					$("#itemId").val(resp.itemId);
+                    $("#itemId").val(resp.itemId);
                     console.log($("#itemId").val());
                     layer.alert(resp.respmsg+" "+ resp.itemId );
                 }
@@ -243,5 +249,6 @@
             }
         });
     }
+
 </script>
 </html>

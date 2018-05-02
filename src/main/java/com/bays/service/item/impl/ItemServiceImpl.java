@@ -32,4 +32,8 @@ public class ItemServiceImpl implements ItemService{
         System.out.println(itemMap.size());
         return itemMap;
     }
+    public int updatePic(String path,String itemId) {
+        int i = itemMapper.updatePic(path,itemId);
+        return i;
+    }
 }

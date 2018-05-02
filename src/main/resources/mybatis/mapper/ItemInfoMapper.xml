@@ -37,6 +37,14 @@
             id=#{item.id}
         </update>
 
+        <update id="updatePic">
+            update iteminfo
+            SET
+            pic_path=#{item_path}
+            WHERE
+            id=#{itemId}
+        </update>
+
         <select id="queryItem" resultType="java.util.Map">
             select * from iteminfo
         </select>

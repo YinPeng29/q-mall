@@ -18,5 +18,6 @@ public interface ItemMapper {
     int addItem(@Param("item")ItemInfo itemInfo);
     int updateItem(@Param("item") ItemInfo itemInfo);
     List<Map> queryItem();
+    int updatePic(@Param("item_path") String path,@Param("itemId") String itemId);
 }
 
