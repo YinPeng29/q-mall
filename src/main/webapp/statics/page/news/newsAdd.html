@@ -15,7 +15,7 @@
 <body>
 <div class="item-class" style="margin-top: 15px">
 	<form class="layui-form" id="item_form1">
-		<input type="hidden" name="itemId" id="itemId" value="177d8cd92a4740a09606610b9b99c7a6" />
+		<input type="hidden" name="itemId" id="itemId" value="aa753d02cd044b55abf70d7d55026153" />
 		<div class="layui-form-item">
 			<label class="layui-form-label">货号</label>
 			<div class="layui-input-block">
@@ -60,9 +60,9 @@
 			</div>
 		</div>
 		<div class="layui-form-item">
-			<label class="layui-form-label">上架</label>
+			<label class="layui-form-label">上/下 架</label>
 			<div class="layui-input-block">
-				<input type="checkbox" name="isOnline" lay-text="上架|下架" lay-skin="switch"/>
+				<input type="checkbox" name="isOnline"  lay-text="ON|OFF" lay-skin="switch"/>
 			</div>
 		</div>
 		<div class="layui-form-item">
@@ -89,13 +89,17 @@
 			<label class="layui-form-label">上传图片</label>
 			<div class="layui-upload">
 				<button type="button" class="layui-btn" id="itemPic">上传图片</button>
+				<span style="color:red;"> &nbsp;&nbsp;注意: 最多上传 5 张图片!</span>
 			</div>
 		</div>
 		<div class="layui-form-item">
-			<label class="layui-form-label"></label>
-			<div class="layui-upload-list" style="float: left;">
-				<img class="layui-upload-img" id="demo1" width="110" height="100">
-			</div>
+			<label class="layui-form-label">预览</label>
+			<!--<div class="layui-upload-list" style="float: left;">-->
+			<!--<img class="layui-upload-img" id="demo1" width="110" height="100">-->
+			<!--</div>-->
+			<blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;margin-left: 110px">
+				<div class="layui-upload-list" id="demo2" style="height: 100px"></div>
+			</blockquote>
 			<div style="float: left;height: 100px;">
 				<p id="demoText"></p>
 			</div>
@@ -132,44 +136,68 @@
             form = layui.form;
 //			$ = layui.jquery;
 
-            var uploadInst = upload.render({
+//            var uploadInst = upload.render({
+//                elem: '#itemPic'
+//                ,url: '/item/uploadImg'
+////				,auto:false
+////				,data:{"itemId":$("#itemId").val()}
+//                ,data: {
+//                    itemId: function(){
+//                        return $("#itemId").val();
+//                    }
+//                }
+//                ,before: function(obj){
+//                    if($("#itemId").val() == ""){
+//                        return false;
+//                    }else{
+//                        //预读本地文件示例，不支持ie8
+//                        obj.preview(function(index, file, result){
+//                            $('#demo1').attr('src', result); //图片链接（base64）
+//                        });
+//                    }
+//                }
+//                ,done: function(resp){
+//                    //如果上传失败
+//                    if(resp.respcode == "0000"){
+//                        return layer.msg('上传成功');
+//                    }else{
+//                        layer.alert(resp.respmsg);
+//                        return false;
+//                    }
+//                    //上传成功
+//                }
+//                ,error: function(){
+//                    //演示失败状态，并实现重传
+//                    var demoText = $('#demoText');
+//                    demoText.html('<span style="color: #FF5722;">上传失败</span><a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+//                    demoText.find('.demo-reload').on('click', function(){
+//                        uploadInst.upload();
+//                    });
+//                }
+//            });
+
+            upload.render({
                 elem: '#itemPic'
-                ,url: '/item/uploadImg'
-//				,auto:false
-//				,data:{"itemId":$("#itemId").val()}
-                ,data: {
-                    itemId: function(){
-                        return $("#itemId").val();
-                    }
-                }
+                ,url: ''
+                ,multiple: true
                 ,before: function(obj){
-                    if($("#itemId").val() == ""){
-                        return false;
-                    }else{
-                        //预读本地文件示例，不支持ie8
-                        obj.preview(function(index, file, result){
-                            $('#demo1').attr('src', result); //图片链接（base64）
-                        });
-                    }
-                }
-                ,done: function(resp){
-                    //如果上传失败
-                    if(resp.respcode == "0000"){
-                        return layer.msg('上传成功');
-                    }else{
-                        layer.alert(resp.respmsg);
-                        return false;
-                    }
-                    //上传成功
-                }
-                ,error: function(){
-                    //演示失败状态，并实现重传
-                    var demoText = $('#demoText');
-                    demoText.html('<span style="color: #FF5722;">上传失败</span><a class="layui-btn layui-btn-mini demo-reload">重试</a>');
-                    demoText.find('.demo-reload').on('click', function(){
-                        uploadInst.upload();
+                    console.log(obj.total);
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#demo2').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img" width="110" height="100" style="padding: 0 4px" >')
                     });
                 }
+                ,done: function(res){
+                    //上传完毕
+                }
+//				,error: function(){
+//				//演示失败状态，并实现重传
+//					var demoText = $('#demoText');
+//					demoText.html('<span style="color: #FF5722;">上传失败</span><a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+//					demoText.find('.demo-reload').on('click', function(){
+//					uploadInst.upload();
+//				});
+//			}
             });
 
             /**

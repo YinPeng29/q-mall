@@ -1046,9 +1046,12 @@ input:focus {
 }
 .banner {
 	width: 100%;
-	height: 50px;
+	height: 40px;
 	/*background: url(../images/slogan2016.png) no-repeat center 30px;*/
 	background-color: #333;
+	text-align: center;
+	color: gray;
+	line-height: 40px;
 }
 
 .carousel-inner img{
