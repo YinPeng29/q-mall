@@ -17,10 +17,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -59,6 +62,12 @@ public class ItemController extends ResponseHandle {
         return ReturnCode.SUCCESS.toJsonObject(json).toJSONString();
     }
 
+    /**
+     * 文件上传 多文件/单文件
+     * @param file
+     * @param request
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "/uploadImg")
     public String uploadHeadImg(@RequestParam("file") MultipartFile file, HttpServletRequest request){
@@ -100,7 +109,7 @@ public class ItemController extends ResponseHandle {
         try {
             file.transferTo(dest);
             //将图片路径保存到数据库中path=dir_path+originalFilename
-            int i = itemService.updatePic(picPath, itemId);
+            int i = itemService.addPic(picPath, itemId);
             if(i>0){
                 return setResponse(ReturnCode.SUCCESS).toJSONString();
             }

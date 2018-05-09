@@ -142,4 +142,15 @@ public class UserController extends ResponseHandle{
         return "激活成功,请前往登录";
     }
 
+    @RequestMapping(value = "/queryCurrentUser",method= RequestMethod.POST)
+    @ResponseBody
+    public String queryCurrentUser(HttpServletRequest req){
+        Object user = req.getSession().getAttribute("user");
+        if(user!=null){
+            return setResponse(ReturnCode.SUCCESS).toJSONString();
+        }
+        return setResponse(ReturnCode.FAILD).toJSONString();
+    }
+
+
 }

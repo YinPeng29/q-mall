@@ -15,7 +15,7 @@
 <body>
 <div class="item-class" style="margin-top: 15px">
 	<form class="layui-form" id="item_form1">
-		<input type="hidden" name="itemId" id="itemId" value="aa753d02cd044b55abf70d7d55026153" />
+		<input type="hidden" name="itemId" id="itemId" value="27fe547e2ce64110af4a93d77fc7d140" />
 		<div class="layui-form-item">
 			<label class="layui-form-label">货号</label>
 			<div class="layui-input-block">
@@ -89,7 +89,7 @@
 			<label class="layui-form-label">上传图片</label>
 			<div class="layui-upload">
 				<button type="button" class="layui-btn" id="itemPic">上传图片</button>
-				<span style="color:red;"> &nbsp;&nbsp;注意: 最多上传 5 张图片!</span>
+				<span style="color:red;"> &nbsp;&nbsp;注意: 最多上传 6 张图片!</span>
 			</div>
 		</div>
 		<div class="layui-form-item">
@@ -178,8 +178,14 @@
 
             upload.render({
                 elem: '#itemPic'
-                ,url: ''
+                ,url: '/item/uploadImg'
+                ,data: {
+                    itemId: function(){
+                        return $("#itemId").val();
+                    }
+                }
                 ,multiple: true
+				,number:6
                 ,before: function(obj){
                     console.log(obj.total);
                     //预读本地文件示例，不支持ie8
@@ -187,8 +193,13 @@
                         $('#demo2').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img" width="110" height="100" style="padding: 0 4px" >')
                     });
                 }
-                ,done: function(res){
-                    //上传完毕
+                ,done: function(resp){
+                    if(resp.respcode == "0000"){
+                        return layer.msg('上传成功');
+                    }else{
+                        layer.alert(resp.respmsg);
+                        return false;
+                    }
                 }
 //				,error: function(){
 //				//演示失败状态，并实现重传

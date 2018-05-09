@@ -37,12 +37,14 @@
             id=#{item.id}
         </update>
 
-        <update id="updatePic">
-            update iteminfo
-            SET
-            pic_path=#{item_path}
-            WHERE
-            id=#{itemId}
+        <update id="addPic">
+            insert into re_item_img
+            (item_id,img_path)
+            values
+            (
+              #{itemId},
+              #{img_path}
+            )
         </update>
 
         <select id="queryItem" resultType="java.util.Map">

@@ -144,5 +144,36 @@
 <script type="text/javascript" src="/statics/layui/layui.js"></script>
 <script type="text/javascript" src="/statics/js/leftNav.js"></script>
 <script type="text/javascript" src="/statics/js/index.js"></script>
+<script type="text/javascript" src="/statics/plugins/jquery-3.2.1.min.js"></script>
 </body>
+<script type="text/javascript">
+    var form1,layer1;
+    window.onload=function () {
+//        init_main();
+        layui.use(['layer', 'form'], function(){
+                layer1 = layui.layer;
+                form1 = layui.form();
+                layer1.msg("hello world");
+        });
+        ajax_user();
+    };
+    function ajax_user(){
+
+        $.ajax({
+            type: "post",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "/user/queryCurrentUser",//url
+//            traditional:true,
+//            async:false,
+//            data:param,
+            success: function(resp){
+                layer.alert(resp.respcode);
+            },
+            error:function(resp){
+                alert(resp.respmsg);
+            }
+        });
+    }
+
+</script>
 </html>
