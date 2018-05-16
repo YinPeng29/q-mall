@@ -1,5 +1,7 @@
 package com.bays.model;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.util.Date;
 
 public class User {
@@ -97,5 +99,13 @@ public class User {
                 ", latest_login_time=" + latest_login_time +
                 ", uuid=" + uuid +
                 '}';
+    }
+
+    public JSONObject toJson(){
+        JSONObject json = new JSONObject();
+        json.put("userId",userId);
+        json.put("userName",userName);
+        json.put("email",email);
+        return json;
     }
 }

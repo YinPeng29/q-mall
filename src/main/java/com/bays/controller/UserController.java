@@ -73,6 +73,7 @@ public class UserController extends ResponseHandle{
             HttpSession session = request.getSession();
             session.setAttribute("user",userName);
             session.setAttribute("isLogin",true);
+            session.setAttribute("user_info",user1);
             System.out.println(this.setResponse(ReturnCode.SUCCESS).toJSONString());
             return this.setResponse(ReturnCode.SUCCESS).toJSONString();
         }
@@ -147,7 +148,8 @@ public class UserController extends ResponseHandle{
     public String queryCurrentUser(HttpServletRequest req){
         Object user = req.getSession().getAttribute("user");
         if(user!=null){
-            return setResponse(ReturnCode.SUCCESS).toJSONString();
+            User currentUser = (User) req.getSession().getAttribute("user_info");
+            return setResponse(ReturnCode.SUCCESS,currentUser.toJson()).toJSONString();
         }
         return setResponse(ReturnCode.FAILD).toJSONString();
     }

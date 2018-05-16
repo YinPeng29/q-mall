@@ -88,7 +88,7 @@
                 <li class="layui-nav-item" pc>
                     <a href="javascript:;">
                         <img src="statics/images/face.jpg" class="layui-circle" width="35" height="35">
-                        <cite>皮皮虾</cite>
+                        <cite id="userinfo_cite"></cite>
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" data-url="/statics/page/user/userInfo.html"><i class="iconfont icon-zhanghu" data-icon="icon-zhanghu"></i><cite>个人资料</cite></a></dd>
@@ -104,7 +104,7 @@
     <div class="layui-side layui-bg-black">
         <div class="user-photo">
             <a class="img" title="我的头像" ><img src="/statics/images/face.jpg"></a>
-            <p>你好！<span class="userName">请叫我皮皮虾</span>, 欢迎登录</p>
+            <p>你好！<span id="userinfo_span" class="userName"></span> , 欢迎登录</p>
         </div>
         <div class="navBar layui-side-scroll"></div>
     </div>
@@ -167,7 +167,11 @@
 //            async:false,
 //            data:param,
             success: function(resp){
-                layer.alert(resp.respcode);
+//                layer.alert(resp.respcode);
+                if(resp.respcode == "0000"){
+                    $("#userinfo_cite").html(resp.datas.userName);
+                    $("#userinfo_span").html(resp.datas.userName);
+                }
             },
             error:function(resp){
                 alert(resp.respmsg);
