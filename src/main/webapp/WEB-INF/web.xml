@@ -10,6 +10,10 @@
                 <!--<welcome-file>index.html</welcome-file>-->
                 <welcome-file>main.html</welcome-file>
         </welcome-file-list>
+        <error-page>
+                <error-code>404</error-code>
+                <location>/error/page</location>
+        </error-page>
 
         <!--配置servlet 核心-->
         <!--<servlet-mapping>-->
