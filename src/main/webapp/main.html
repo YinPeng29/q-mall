@@ -6,6 +6,7 @@
 	<link rel="shortcut icon" href="statics/images/pq.png" type="image/x-icon">
 	<link rel="stylesheet" href="/statics/css/main2.css">
 	<!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+	<script src="/statics/layui2.2/css/layui.css"></script>
 	<script src="/statics/plugins/jquery-3.2.1.min.js"></script>
 </head>
 <body>
@@ -417,7 +418,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8" id="view1">
 				<ul class="goods-list list-active hot-list clearfix">
 					<li class="goods-item goods-item-m">
 						<div class="goods-thumb">
@@ -599,119 +600,119 @@
 		</div>
 
 		<!-- 推荐 -->
-		<div class="reco-goods">
-			<div class="s-lg-title">
-				<span class="page-title">为你推荐</span>
-				<div class="title-more">
-					<a href="javascript:" class="reco-prev btn-default"><i class="iconfont">&#xe697;</i></a>
-					<a href="javascript:" class="reco-next"><i class="iconfont">&#xe6a7;</i></a>
-				</div>
-			</div>
-			<div class="col-md-12">
-				<ul class="reco-list clearfix">
-					<li class="goods-item goods-item-m">
-						<div class="goods-thumb">
-							<a href="#"><img src="/uploadImg/3.jpg"></a>
-						</div>
-						<div class="goods-title">
-							<a href="#" class="title">推荐1</a>
-						</div>
-						<p class="goods-info">超长续航，多彩金属</p>
-						<p class="goods-price">1440元</p>
-					</li>
-					<li class="goods-item goods-item-m">
-						<div class="goods-thumb">
-							<a href="#" class="title"><img src="/uploadImg/4.jpg"></a>
-						</div>
-						<div class="goods-title">
-							<a href="#" class="title">推荐2</a>
-						</div>
-						<p class="goods-info">超长续航，多彩金属</p>
-						<p class="goods-price">1440元</p>
-					</li>
-					<li class="goods-item goods-item-m">
-						<div class="goods-thumb">
-							<a href="#" class="title"><img src="/uploadImg/4.jpg"></a>
-						</div>
-						<div class="goods-title">
-							<a href="#" class="title">推荐3</a>
-						</div>
-						<p class="goods-info">超长续航，多彩金属</p>
-						<p class="goods-price">1440元</p>
-					</li>
-					<li class="goods-item goods-item-m">
-						<div class="goods-thumb">
-							<a href="#"><img src="/uploadImg/4.jpg"></a>
-						</div>
-						<div class="goods-title">
-							<a href="#" class="title">推荐4</a>
-						</div>
-						<p class="goods-info">超长续航，多彩金属</p>
-						<p class="goods-price">1440元</p>
-					</li>
-					<li class="goods-item goods-item-m">
-						<div class="goods-thumb">
-							<a href="#"><img src="/uploadImg/4.jpg"></a>
-						</div>
-						<div class="goods-title">
-							<a href="#" class="title">推荐5</a>
-						</div>
-						<p class="goods-info">超长续航，多彩金属</p>
-						<p class="goods-price">1440元</p>
-					</li>
-					<li class="goods-item goods-item-m">
-						<div class="goods-thumb">
-							<a href="#"><img src="/uploadImg/4.jpg"></a>
-						</div>
-						<div class="goods-title">
-							<a href="#" class="title">推荐6</a>
-						</div>
-						<p class="goods-info">超长续航，多彩金属</p>
-						<p class="goods-price">1440元</p>
-					</li>
-					<li class="goods-item goods-item-m">
-						<div class="goods-thumb">
-							<a href="#"><img src="/statics/images/icon/holder_110.png"></a>
-						</div>
-						<div class="goods-title">
-							<a href="#" class="title">推荐7</a>
-						</div>
-						<p class="goods-info">超长续航，多彩金属</p>
-						<p class="goods-price">1440元</p>
-					</li>
-					<li class="goods-item goods-item-m">
-						<div class="goods-thumb">
-							<a href="#"><img src="/statics/images/icon/holder_110.png"></a>
-						</div>
-						<div class="goods-title">
-							<a href="#" class="title">推荐7</a>
-						</div>
-						<p class="goods-info">超长续航，多彩金属</p>
-						<p class="goods-price">1440元</p>
-					</li>
-					<li class="goods-item goods-item-m">
-						<div class="goods-thumb">
-							<a href="#"><img src="/statics/images/icon/holder_110.png"></a>
-						</div>
-						<div class="goods-title">
-							<a href="#" class="title">推荐7</a>
-						</div>
-						<p class="goods-info">超长续航，多彩金属</p>
-						<p class="goods-price">1440元</p>
-					</li>
-					<li class="goods-item goods-item-m">
-						<div class="goods-thumb">
-							<a href="#"><img src="/statics/images/icon/holder_110.png"></a>
-						</div>
-						<div class="goods-title">
-							<a href="#" class="title">推荐7</a>
-						</div>
-						<p class="goods-info">超长续航，多彩金属</p>
-						<p class="goods-price">1440元</p>
-					</li>
-				</ul>
-			</div>
-		</div>
+		<!--<div class="reco-goods">-->
+			<!--<div class="s-lg-title">-->
+				<!--<span class="page-title">为你推荐</span>-->
+				<!--<div class="title-more">-->
+					<!--<a href="javascript:" class="reco-prev btn-default"><i class="iconfont">&#xe697;</i></a>-->
+					<!--<a href="javascript:" class="reco-next"><i class="iconfont">&#xe6a7;</i></a>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="col-md-12">-->
+				<!--<ul class="reco-list clearfix">-->
+					<!--<li class="goods-item goods-item-m">-->
+						<!--<div class="goods-thumb">-->
+							<!--<a href="#"><img src="/uploadImg/3.jpg"></a>-->
+						<!--</div>-->
+						<!--<div class="goods-title">-->
+							<!--<a href="#" class="title">推荐1</a>-->
+						<!--</div>-->
+						<!--<p class="goods-info">超长续航，多彩金属</p>-->
+						<!--<p class="goods-price">1440元</p>-->
+					<!--</li>-->
+					<!--<li class="goods-item goods-item-m">-->
+						<!--<div class="goods-thumb">-->
+							<!--<a href="#" class="title"><img src="/uploadImg/4.jpg"></a>-->
+						<!--</div>-->
+						<!--<div class="goods-title">-->
+							<!--<a href="#" class="title">推荐2</a>-->
+						<!--</div>-->
+						<!--<p class="goods-info">超长续航，多彩金属</p>-->
+						<!--<p class="goods-price">1440元</p>-->
+					<!--</li>-->
+					<!--<li class="goods-item goods-item-m">-->
+						<!--<div class="goods-thumb">-->
+							<!--<a href="#" class="title"><img src="/uploadImg/4.jpg"></a>-->
+						<!--</div>-->
+						<!--<div class="goods-title">-->
+							<!--<a href="#" class="title">推荐3</a>-->
+						<!--</div>-->
+						<!--<p class="goods-info">超长续航，多彩金属</p>-->
+						<!--<p class="goods-price">1440元</p>-->
+					<!--</li>-->
+					<!--<li class="goods-item goods-item-m">-->
+						<!--<div class="goods-thumb">-->
+							<!--<a href="#"><img src="/uploadImg/4.jpg"></a>-->
+						<!--</div>-->
+						<!--<div class="goods-title">-->
+							<!--<a href="#" class="title">推荐4</a>-->
+						<!--</div>-->
+						<!--<p class="goods-info">超长续航，多彩金属</p>-->
+						<!--<p class="goods-price">1440元</p>-->
+					<!--</li>-->
+					<!--<li class="goods-item goods-item-m">-->
+						<!--<div class="goods-thumb">-->
+							<!--<a href="#"><img src="/uploadImg/4.jpg"></a>-->
+						<!--</div>-->
+						<!--<div class="goods-title">-->
+							<!--<a href="#" class="title">推荐5</a>-->
+						<!--</div>-->
+						<!--<p class="goods-info">超长续航，多彩金属</p>-->
+						<!--<p class="goods-price">1440元</p>-->
+					<!--</li>-->
+					<!--<li class="goods-item goods-item-m">-->
+						<!--<div class="goods-thumb">-->
+							<!--<a href="#"><img src="/uploadImg/4.jpg"></a>-->
+						<!--</div>-->
+						<!--<div class="goods-title">-->
+							<!--<a href="#" class="title">推荐6</a>-->
+						<!--</div>-->
+						<!--<p class="goods-info">超长续航，多彩金属</p>-->
+						<!--<p class="goods-price">1440元</p>-->
+					<!--</li>-->
+					<!--<li class="goods-item goods-item-m">-->
+						<!--<div class="goods-thumb">-->
+							<!--<a href="#"><img src="/statics/images/icon/holder_110.png"></a>-->
+						<!--</div>-->
+						<!--<div class="goods-title">-->
+							<!--<a href="#" class="title">推荐7</a>-->
+						<!--</div>-->
+						<!--<p class="goods-info">超长续航，多彩金属</p>-->
+						<!--<p class="goods-price">1440元</p>-->
+					<!--</li>-->
+					<!--<li class="goods-item goods-item-m">-->
+						<!--<div class="goods-thumb">-->
+							<!--<a href="#"><img src="/statics/images/icon/holder_110.png"></a>-->
+						<!--</div>-->
+						<!--<div class="goods-title">-->
+							<!--<a href="#" class="title">推荐7</a>-->
+						<!--</div>-->
+						<!--<p class="goods-info">超长续航，多彩金属</p>-->
+						<!--<p class="goods-price">1440元</p>-->
+					<!--</li>-->
+					<!--<li class="goods-item goods-item-m">-->
+						<!--<div class="goods-thumb">-->
+							<!--<a href="#"><img src="/statics/images/icon/holder_110.png"></a>-->
+						<!--</div>-->
+						<!--<div class="goods-title">-->
+							<!--<a href="#" class="title">推荐7</a>-->
+						<!--</div>-->
+						<!--<p class="goods-info">超长续航，多彩金属</p>-->
+						<!--<p class="goods-price">1440元</p>-->
+					<!--</li>-->
+					<!--<li class="goods-item goods-item-m">-->
+						<!--<div class="goods-thumb">-->
+							<!--<a href="#"><img src="/statics/images/icon/holder_110.png"></a>-->
+						<!--</div>-->
+						<!--<div class="goods-title">-->
+							<!--<a href="#" class="title">推荐7</a>-->
+						<!--</div>-->
+						<!--<p class="goods-info">超长续航，多彩金属</p>-->
+						<!--<p class="goods-price">1440元</p>-->
+					<!--</li>-->
+				<!--</ul>-->
+			<!--</div>-->
+		<!--</div>-->
 		<!-- 热评产品 -->
 		<div class="hot-review">
 			<div class="title">
@@ -920,9 +921,65 @@
 	京ICP备14040xxx号-1
 </div>
 </body>
+<script id="demo" type="text/html">
+	<ul class="goods-list list-active hot-list clearfix">
+		{{#  layui.each(d.list, function(index, item){ }}
+			<li class="goods-item goods-item-m">
+				<div class="goods-thumb">
+					<a href="/statics/page/item/item_detail.html"><img src="{{ item.pic_path }}"></a>
+				</div>
+				<div class="goods-title">
+					<a href="/statics/page/item/item_detail.html" class="title">{{ item.name }}</a>
+				</div>
+				<p class="goods-info">{{ item.description }}</p>
+				<p class="goods-price">{{ item.price }}</p>
+				<div class="product-label">
+					<div class="goods-label">新品</div>
+				</div>
+			</li>
+		{{#  }); }}
+		{{#  if(d.list.length === 0){ }}
+			无数据
+		{{#  } }}
+	</ul>
+</script>
+
+<script src="/statics/layui2.2/layui.all.js"></script>
 <script src="/statics/js/main2.js"></script>
 <script src="/statics/js/holder2.min.js"></script>
+<script src="/statics/plugins/jquery-3.2.1.min.js"></script>
 <script>
+	var laytpl;
+    window.onload=function () {
+        layui.use('laytpl', function(){
+            laytpl = layui.laytpl;
+        });
+        console.log(laytpl);
+        itemShow();
+    };
 
+	function itemShow(){
+	    $.ajax({
+            type: "post",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "/main/queryItem",//url
+//            traditional:true,
+//            async:false,
+//            data:param,
+            success: function(resp){
+                if(resp.respcode=="0000"){
+                    var getTpl = demo.innerHTML
+                        ,view = document.getElementById('view1');
+                    laytpl(getTpl).render(resp, function(html){
+                        view.innerHTML = html;
+                    });
+//                    alert(resp.datas);
+				}
+			},
+            error:function(resp){
+                alert(resp.respmsg);
+            }
+		});
+	}
 </script>
 </html>
