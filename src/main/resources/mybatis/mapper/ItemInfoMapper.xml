@@ -48,6 +48,6 @@
         </update>
 
         <select id="queryItem" resultType="java.util.Map">
-            select * from iteminfo
+            select a.*,b.img_path from iteminfo a left join re_item_img b on a.id=b.item_id
         </select>
 </mapper>
