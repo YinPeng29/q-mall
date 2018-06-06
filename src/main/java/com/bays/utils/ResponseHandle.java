@@ -30,6 +30,8 @@ public class ResponseHandle {
     }
     public String toJsonString(Object obj){
         net.sf.json.JSONObject json = net.sf.json.JSONObject.fromObject(obj);
+        json.put(Field.Common.RESP_CODE,ReturnCode.SUCCESS.getCode());
+        json.put(Field.Common.RESP_MSG,ReturnCode.SUCCESS.getMsg());
         return json.toString();
     }
 }

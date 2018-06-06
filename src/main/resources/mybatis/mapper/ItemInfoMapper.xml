@@ -3,51 +3,63 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.bays.dao.ItemMapper">
-        <insert id="addItem">
-            insert into iteminfo
-            (id,item_number,logo,name,type,size,is_online,sex,price,description)
-            values
-            (
-            #{item.id},
-            #{item.number},
-            #{item.logo},
-            #{item.name},
-            #{item.type},
-            #{item.size},
-            #{item.is_online},
-            #{item.sex},
-            #{item.price},
-            #{item.description}
-            )
-        </insert>
+    <insert id="addItem">
+        insert into iteminfo
+        (id,item_number,logo,name,type,size,is_online,sex,price,description)
+        values
+        (
+        #{item.id},
+        #{item.number},
+        #{item.logo},
+        #{item.name},
+        #{item.type},
+        #{item.size},
+        #{item.is_online},
+        #{item.sex},
+        #{item.price},
+        #{item.description}
+        )
+    </insert>
 
-        <update id="updateItem">
-            update iteminfo
-            SET
-            item_number=#{item.number},
-            logo=#{item.logo},
-            name=#{item.name},
-            type=#{item.type},
-            size=#{item.size},
-            is_online=#{item.is_online},
-            sex=#{item.sex},
-            price=#{item.price},
-            description=#{item.description}
-            WHERE
-            id=#{item.id}
-        </update>
+    <update id="updateItem">
+        update iteminfo
+        SET
+        item_number=#{item.number},
+        logo=#{item.logo},
+        name=#{item.name},
+        type=#{item.type},
+        size=#{item.size},
+        is_online=#{item.is_online},
+        sex=#{item.sex},
+        price=#{item.price},
+        description=#{item.description}
+        WHERE
+        id=#{item.id}
+    </update>
 
-        <update id="addPic">
-            insert into re_item_img
-            (item_id,img_path)
-            values
-            (
-              #{itemId},
-              #{img_path}
-            )
-        </update>
+    <insert id="addPic">
+        insert into re_item_img
+        (item_id,img_path)
+        values
+        (
+          #{itemId},
+          #{img_path}
+        )
+    </insert>
 
-        <select id="queryItem" resultType="java.util.Map">
-            select a.*,b.img_path from iteminfo a left join re_item_img b on a.id=b.item_id
-        </select>
+    <select id="queryItem" resultType="java.util.Map">
+        select * from iteminfo
+    </select>
+
+    <select id="queryItemById" resultType="java.util.Map">
+        select pic_path from iteminfo where id = #{itemId}
+    </select>
+
+    <update id="updatePic">
+        update iteminfo
+        SET
+        pic_path = #{pic_path}
+        where
+        id = #{itemId}
+    </update>
 </mapper>

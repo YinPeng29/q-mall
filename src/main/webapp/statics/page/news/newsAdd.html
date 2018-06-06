@@ -15,7 +15,7 @@
 <body>
 <div class="item-class" style="margin-top: 15px">
 	<form class="layui-form" id="item_form1">
-		<input type="hidden" name="itemId" id="itemId" value="27fe547e2ce64110af4a93d77fc7d140" />
+		<input type="hidden" name="itemId" id="itemId" value="" />
 		<div class="layui-form-item">
 			<label class="layui-form-label">货号</label>
 			<div class="layui-input-block">
@@ -277,11 +277,14 @@
             async:false,
             data:param,
             success: function(resp){
+                console.log(resp.respcode);
                 if(resp.respcode == "0000"){
                     $("#itemId").val(resp.itemId);
                     console.log($("#itemId").val());
                     layer.alert(resp.respmsg+" "+ resp.itemId );
-                }
+                }else{
+                    layer.alert(resp.respmsg);
+				}
             },
             error:function(resp){
                 layer.alert(resp.respmsg);

@@ -45,9 +45,17 @@ public class ItemController extends ResponseHandle {
     @RequestMapping(value = "/additem")
     public String addItem(ItemInfo itemInfo, HttpServletRequest request){
         System.out.println("itemInfo: "+super.toJsonString(itemInfo));
+        if(StringUtils.isBlank(itemInfo.getLogo()) || StringUtils.isBlank(itemInfo.getName()) ){
+            logger.info("msg: "+setResponse(ReturnCode.ERROR_PARAM_NULL).toJSONString());
+            return setResponse(ReturnCode.ERROR_PARAM_NULL).toJSONString();
+        }
+        String id = SysUtil.randomUUID();
+        itemInfo.setId(id);
         int i = itemService.addItem(itemInfo);
         if(i>0){
-            return setResponse(ReturnCode.SUCCESS).toJSONString();
+            JSONObject js = new JSONObject();
+            js.put("itemId",id);
+            return toJsonString(js);
         }
         return setResponse(ReturnCode.FAILD).toJSONString();
     }
