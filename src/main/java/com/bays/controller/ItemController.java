@@ -13,6 +13,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,6 +24,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
@@ -42,6 +46,7 @@ public class ItemController extends ResponseHandle {
     private String dir_path;
 
     @ResponseBody
+    @Transactional(propagation= Propagation.REQUIRED,rollbackForClassName="Exception")
     @RequestMapping(value = "/additem")
     public String addItem(ItemInfo itemInfo, HttpServletRequest request){
         System.out.println("itemInfo: "+super.toJsonString(itemInfo));
@@ -77,6 +82,7 @@ public class ItemController extends ResponseHandle {
      * @return
      */
     @ResponseBody
+    @Transactional(propagation= Propagation.REQUIRED,rollbackForClassName="Exception")
     @RequestMapping(value = "/uploadImg")
     public String uploadHeadImg(@RequestParam("file") MultipartFile file, HttpServletRequest request){
         String itemId = request.getParameter("itemId");
@@ -127,4 +133,6 @@ public class ItemController extends ResponseHandle {
             return setResponse(ReturnCode.FAILD).toJSONString();
         }
     }
+
+
 }

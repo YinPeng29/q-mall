@@ -12,4 +12,6 @@ public interface ItemService {
     Map queryItemById(String itemId);
     int addPic(String path,String itemId);
 //    int updatePic(String picPath,String ItemId);
+//    Map queryItemDetail(String id);
+    List<Map> queryPicPath(String itemId);
 }

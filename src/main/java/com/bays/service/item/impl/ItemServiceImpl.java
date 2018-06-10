@@ -35,7 +35,7 @@ public class ItemServiceImpl implements ItemService{
     public int addPic(String path,String itemId) {
         Map map = this.queryItemById(itemId);
 //        String pic_path = (String) map.get("pic_path");
-        if(map == null ){
+        if(StringUtils.isBlank((String)map.get("pic_path")) ){
             int i = itemMapper.updatePic(path, itemId);
             if(i==0){
                 return 0;
@@ -50,8 +50,13 @@ public class ItemServiceImpl implements ItemService{
         return map;
     }
 
-//    public int updatePic(String picPath, String ItemId) {
-//        itemMapper.up
-//        return 0;
+//    public Map queryItemDetail(String id) {
+//        Map map = itemMapper.queryItemDetail(id);
+//        return map;
 //    }
+
+    public List<Map> queryPicPath(String itemId) {
+        List<Map> maps = itemMapper.queryItemPic(itemId);
+        return maps;
+    }
 }
