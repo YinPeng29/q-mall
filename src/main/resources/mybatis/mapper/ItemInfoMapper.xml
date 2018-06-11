@@ -52,7 +52,7 @@
     </select>
 
     <select id="queryItemById" resultType="java.util.Map">
-        select pic_path from iteminfo where id = #{itemId}
+        select * from iteminfo where id = #{itemId}
     </select>
 
     <update id="updatePic">
@@ -62,4 +62,8 @@
         where
         id = #{itemId}
     </update>
+
+    <select id="queryItemPic" resultType="java.util.Map">
+        select * from re_item_img WHERE item_id=#{itemId}
+    </select>
 </mapper>
