@@ -32,18 +32,8 @@
                 thisMb1.style.borderColor = '#cd2426';
                 $huantu[0].src = thisMb1.children[0].src;
             }
-            $(".Xcontent33").click(function(){
-                var value=parseInt($('.input').val())+1;
-                $('.input').val(value);
-            })
 
-            $(".Xcontent32").click(function(){
-                var num = $(".input").val()
-                if(num>0){
-                    $(".input").val(num-1);
-                }
 
-            })
 
         })
 
@@ -259,10 +249,10 @@
         </div>
         <div class="Xcontent30">
             <p class="Xcontent31">数量</p>
-            <div class="Xcontent32"><img src="/statics/images/shangpinxiangqing/X15.png"></div>
+            <div class="Xcontent32" style="cursor: pointer;"><img src="/statics/images/shangpinxiangqing/X15.png"></div>
             <form>
-                <input class="input" value="1"></form>
-            <div class="Xcontent33"><img src="/statics/images/shangpinxiangqing/16.png"></div>
+                <input class="input number" value="1"></form>
+            <div class="Xcontent33" style="cursor: pointer;"><img src="/statics/images/shangpinxiangqing/16.png"></div>
 
         </div>
         <div class="Xcontent34"><a href="#"><img src="/statics/images/shangpinxiangqing/X17.png"></a></div>
@@ -309,6 +299,48 @@
                     });
 //                    alert(resp.datas);
                 }
+                //商品增加
+                $(".Xcontent33").on("click",function(){
+                    var value=parseInt($('.input').val())+1;
+                    $('.input').val(value);
+                })
+                //商品减少
+                $(".Xcontent32").on("click",function(){
+                    var num = $(".input").val()
+                    if(num>1){
+                        $(".input").val(num-1);
+                    }
+
+                });
+                //立即购买
+                $(".Xcontent34").off("click");
+                $(".Xcontent34").on("click",function () {
+                    var number = +($(".number").val());
+                    var price = resp.itemInfo.price;
+                    var id = resp.itemInfo.id;
+                    var totalPrice = (number*price).toFixed(2);
+
+                });
+
+
+
+                //加入购物车
+                $(".Xcontent35").off("click");
+                $(".Xcontent35").on("click",function () {
+                    var number = +($(".number").val());
+                    var price = resp.itemInfo.price;
+                    var id = resp.itemInfo.id;
+                    var totalPrice = (number*price).toFixed(2);
+                    $.ajax({
+                        url:"",
+                        type:"post",
+                        data:{},
+                        complete:function () {
+                            
+                        }
+                    });
+                });
+
             },
             error:function(resp){
                 alert(resp.respmsg);
@@ -317,4 +349,5 @@
     }
 
 </script>
+
 </html>

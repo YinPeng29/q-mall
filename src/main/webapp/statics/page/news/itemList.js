@@ -61,4 +61,59 @@ layui.config({
             dataName:'datas'
         }
     });
+
+    table.on('tool(itemList_filter)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+        var data = obj.data; //获得当前行数据
+        var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+        // var tr = obj.tr; //获得当前行 tr 的DOM对象
+
+        if(layEvent === 'detail'){ //查看
+            console.log(data);
+            // layer.alert(JSON.stringify(data));
+            layer.open({
+                title:['添加商品','font-size:18px;'],
+                skin:'layui-layer-lan',
+                type: 1,
+                maxmin:true,
+                content: $('#detail_id'), //这里content是一个普通的String
+                success: function(layero, index){
+                    $("#item_number").val(data.item_number);
+                    $("#logo_id").val(data.logo);
+                    $("#name_id").val(data.name);
+                    $("#type_id").val(data.type);
+                    if(data.is_online == 1){
+                        $("#isOnline").attr("checked");
+                    }
+
+                    $("#price_id").val(data.price);
+                    $("#description").val(data.description);
+                },
+                area: ['1350px', '760px'],
+                cancel: function(index, layero){
+                    layer.confirm('确定关闭么', {icon: 6, title:'提示'}, function(confirm_index){
+                        //do something
+                        layer.close(index);
+                        layer.close(confirm_index);
+                    });
+                    return false;
+                }
+            });
+        }
+        // else if(layEvent === 'del'){ //删除
+        //     layer.confirm('真的删除行么', function(index){
+        //         obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+        //         layer.close(index);
+        //         //向服务端发送删除指令
+        //     });
+        // } else if(layEvent === 'edit'){ //编辑
+        //     //do something
+        //
+        //     //同步更新缓存对应的值
+        //     obj.update({
+        //         username: '123'
+        //         ,title: 'xxx'
+        //     });
+        // }
+    });
+
 });

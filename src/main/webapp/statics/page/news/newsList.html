@@ -42,6 +42,110 @@
 
 	</table>
 </div>
+
+
+<div class="item-class" style="margin-top: 15px;display: none" id="detail_id">
+	<form class="layui-form" id="item_form1">
+		<input type="hidden" name="itemId" id="itemId" value="" />
+		<div class="layui-form-item">
+			<label class="layui-form-label">货号</label>
+			<div class="layui-input-block">
+				<input type="text" name="number" id="item_number" required  lay-verify="required" placeholder="请输入品牌" autocomplete="off" class="layui-input">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">品牌</label>
+			<div class="layui-input-block">
+				<input type="text" name="logo" id="logo_id" required  lay-verify="required" placeholder="请输入品牌" autocomplete="off" class="layui-input">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">服饰名称</label>
+			<div class="layui-input-block">
+				<input type="text" name="name" id="name_id" required  lay-verify="required" placeholder="服饰名称" autocomplete="off" class="layui-input">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">类型</label>
+			<div class="layui-input-block">
+				<select name="type" lay-verify="required" id="type_id">
+					<option value=""></option>
+					<option value="0">外套</option>
+					<option value="1">打底衫</option>
+					<option value="2">裤子直筒</option>
+					<option value="3">裤子小脚</option>
+					<option value="4">鞋子</option>
+				</select>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">尺寸选择</label>
+			<div class="layui-input-block">
+				<input type="checkbox" name="" value="S" title="S"/>
+				<input type="checkbox" name="" value="M" title="M"/>
+				<input type="checkbox" name="" value="L" title="L"/>
+				<input type="checkbox" name="" value="XL" title="XL"/>
+				<input type="checkbox" name="" value="XXL" title="XXL"/>
+				<input type="checkbox" name="" value="XXXL" title="XXXL"/>
+				<input type="checkbox" name="" value="XXXXL" title="XXXXL"/>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">上/下 架</label>
+			<div class="layui-input-block">
+				<input type="checkbox" name="isOnline"  id="isOnline" lay-text="ON|OFF" lay-skin="switch"/>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">单选框</label>
+			<div class="layui-input-block">
+				<input type="radio" name="sex" value="0" title="男">
+				<input type="radio" name="sex" value="1" title="女" checked>
+				<input type="radio" name="sex" value="2" title="中性">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">价格</label>
+			<div class="layui-input-block">
+				<input type="text" name="price" id="price_id" required  lay-verify="required" placeholder="服饰名称" autocomplete="off" class="layui-input">
+			</div>
+		</div>
+		<div class="layui-form-item layui-form-text">
+			<label class="layui-form-label">商品介绍</label>
+			<div class="layui-input-block">
+				<textarea name="description" id="description" placeholder="请输入内容" class="layui-textarea"></textarea>
+			</div>
+		</div>
+		<!--<div class="layui-form-item">-->
+			<!--<label class="layui-form-label">上传图片</label>-->
+			<!--<div class="layui-upload">-->
+				<!--<button type="button" class="layui-btn" id="itemPic">上传图片</button>-->
+				<!--<span style="color:red;"> &nbsp;&nbsp;注意: 最多上传 6 张图片!</span>-->
+			<!--</div>-->
+		<!--</div>-->
+		<!--<div class="layui-form-item">-->
+			<!--<label class="layui-form-label">预览</label>-->
+			<!--&lt;!&ndash;<div class="layui-upload-list" style="float: left;">&ndash;&gt;-->
+			<!--&lt;!&ndash;<img class="layui-upload-img" id="demo1" width="110" height="100">&ndash;&gt;-->
+			<!--&lt;!&ndash;</div>&ndash;&gt;-->
+			<!--<blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;margin-left: 110px">-->
+				<!--<div class="layui-upload-list" id="demo2" style="height: 100px"></div>-->
+			<!--</blockquote>-->
+			<!--<div style="float: left;height: 100px;">-->
+				<!--<p id="demoText"></p>-->
+			<!--</div>-->
+		<!--</div>-->
+
+	</form>
+	<div class="layui-form-item">
+		<div class="layui-input-block">
+			<button class="layui-btn" lay-submit="" lay-filter="addNews" onclick="itemAdd()">立即提交</button>
+			<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+		</div>
+	</div>
+</div>
+</body>
+
 <div id="page"></div>
 <script type="text/javascript" src="../../layui2.2/layui.js"></script>
 <script type="text/javascript" src="itemList.js"></script>
