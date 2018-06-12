@@ -66,4 +66,27 @@
     <select id="queryItemPic" resultType="java.util.Map">
         select * from re_item_img WHERE item_id=#{itemId}
     </select>
+
+    <insert id="addCart">
+        insert into cart
+        (
+           id,
+           user_id,
+           item_id,
+           item_num,
+          createdate
+        )
+        values
+        (
+          #{id},
+          #{userId},
+          #{itemId},
+          #{num},
+          #{createdate}
+        )
+    </insert>
+
+    <select id="queryCartInfo"  resultType="java.util.Map">
+        select item_id,item_num from cart where user_id = #{userId}
+    </select>
 </mapper>

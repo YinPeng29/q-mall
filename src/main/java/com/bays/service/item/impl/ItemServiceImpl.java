@@ -3,11 +3,11 @@ package com.bays.service.item.impl;
 import com.bays.dao.ItemMapper;
 import com.bays.model.ItemInfo;
 import com.bays.service.item.ItemService;
-import com.bays.utils.SysUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -57,6 +57,16 @@ public class ItemServiceImpl implements ItemService{
 
     public List<Map> queryPicPath(String itemId) {
         List<Map> maps = itemMapper.queryItemPic(itemId);
+        return maps;
+    }
+
+    public int addCart(String id, String userId, String itemId, String num,Date createdate) {
+        int i = itemMapper.addCart(id, userId, itemId, num,createdate);
+        return i;
+    }
+
+    public List<Map> queryCartInfo(String userId) {
+        List<Map> maps = itemMapper.queryCartInfo(userId);
         return maps;
     }
 }

@@ -277,6 +277,9 @@
         console.log(laytpl);
         var req = GetRequest();
         console.log(req.id);
+        console.log(req.userId);
+        var href = "/statics/page/carts/carts.html?userId="+"0688f52f54214049b1e397e85e87568b";
+        $(".topbar-cart a").attr({"href":href});
         itemDetail(req.id);
     };
 
@@ -332,19 +335,30 @@
                     var id = resp.itemInfo.id;
                     var totalPrice = (number*price).toFixed(2);
                     $.ajax({
-                        url:"",
+                        url:"/item/addToCart",
+                        dataType: "json",
                         type:"post",
-                        data:{},
-                        complete:function () {
-                            
+                        data:{"itemId":id,"num":number},
+                        success:function (resp) {
+
+                            if(resp.respcode=="0000"){
+                                var userId = resp.userId;
+                                window.location.href = "/statics/page/carts/carts.html?userId="+userId;
+
+                            }else{
+                                layer.alert("系统错误123！");
+                            }
+                        },
+                        error:function(resp){
+                            console.log(resp);
+                            layer.alert("系统错误！");
                         }
+
                     });
                 });
 
             },
-            error:function(resp){
-                alert(resp.respmsg);
-            }
+
         });
     }
 

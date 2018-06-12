@@ -1,7 +1,9 @@
 package com.bays.controller;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.bays.model.ItemInfo;
+import com.bays.model.User;
 import com.bays.service.item.ItemService;
 import com.bays.utils.Field;
 import com.bays.utils.ResponseHandle;
@@ -15,19 +17,15 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
-import java.util.Iterator;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -134,5 +132,42 @@ public class ItemController extends ResponseHandle {
         }
     }
 
+    @ResponseBody
+    @RequestMapping("/addToCart")
+    @Transactional(propagation= Propagation.REQUIRED,rollbackForClassName="Exception")
+    public String addToCart(@RequestParam("itemId") String itemId,@RequestParam("num") String num,HttpServletRequest request){
+        String id = SysUtil.randomUUID();
+        User user = (User) request.getSession().getAttribute("user_info");
+        String userId = String.valueOf(user.getUserId());
+        int i = itemService.addCart(id, userId, itemId, num,new Date());
+        if(i<=0){
+            return setResponse(ReturnCode.FAILD_ADD_CART).toJSONString();
+        }
 
+        JSONObject js = new JSONObject();
+        js.put("userId",userId);
+        return toJsonString(js);
+    }
+
+    @ResponseBody
+    @RequestMapping("/getCartInfo")
+    public String getCartInfo(HttpServletRequest request,@RequestParam("userId") String userId){
+        List<Map> maps = itemService.queryCartInfo(userId);
+        JSONArray ja = new JSONArray();
+        for (Map map:maps) {
+            JSONObject js = new JSONObject();
+            String itemId =(String) map.get("item_id");
+            Map itemMap = itemService.queryItemById(itemId);
+            String num =(String) map.get("num");
+            itemMap.put("num",num);
+            js.put("data",itemMap);
+            ja.add(js);
+        }
+        JSONObject js = new JSONObject();
+        js.put("respdata",ja);
+        js.put("respcode","0000");
+        js.put("respmsg","成功");
+        System.out.println(js.toJSONString());
+        return js.toString();
+    }
 }

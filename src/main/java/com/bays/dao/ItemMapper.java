@@ -3,6 +3,7 @@ import com.bays.model.ItemInfo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -23,5 +24,11 @@ public interface ItemMapper {
     int updatePic(@Param("pic_path") String pic_path,@Param("itemId") String itemId);
     Map queryItemDetail(@Param("itemId") String itemId);
     List<Map> queryItemPic(@Param("itemId") String itemId);
+
+    /**
+     * 添加商品到购物车
+     */
+    int addCart(@Param("id") String id,@Param("userId") String userId,@Param("itemId") String itemId,@Param("num") String num,@Param("createdate") Date createdate);
+    List<Map> queryCartInfo(@Param("userId") String userId);
 }
 
