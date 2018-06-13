@@ -101,6 +101,7 @@ public class UserController extends ResponseHandle{
         user.setAddTime(new Date());
         user.setEmail(request.getParameter("email"));
         user.setStatus(0); //新用户状态0 待激活
+        user.setType("0");
         //唯一标识
         String uuid = SysUtil.randomUUID();
         String userid= SysUtil.randomUUID();

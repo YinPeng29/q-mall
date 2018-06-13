@@ -21,8 +21,8 @@
     </select>
 
     <insert id="insert">
-        insert into user_info(user_id,user_name,password,email,status,add_time,UUID) values (#{user.userId},#{user.userName},#{user.passWord},
-        #{user.email},#{user.status},#{user.addTime},#{user.uuid})
+        insert into user_info(user_id,user_name,password,email,status,add_time,UUID,`type`) values (#{user.userId},#{user.userName},#{user.passWord},
+        #{user.email},#{user.status},#{user.addTime},#{user.uuid},#{user.type})
     </insert>
 
     <select id="selectUser"  resultMap="resultUser" parameterType="com.bays.model.User">
