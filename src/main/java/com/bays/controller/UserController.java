@@ -8,6 +8,7 @@ import com.bays.utils.ResponseHandle;
 import com.bays.utils.ReturnCode;
 import com.bays.utils.SysUtil;
 import com.bays.utils.redisTool.RedisUtil;
+import com.google.gson.JsonObject;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -75,7 +76,9 @@ public class UserController extends ResponseHandle{
             session.setAttribute("isLogin",true);
             session.setAttribute("user_info",user1);
             System.out.println(this.setResponse(ReturnCode.SUCCESS).toJSONString());
-            return this.setResponse(ReturnCode.SUCCESS).toJSONString();
+            com.alibaba.fastjson.JSONObject js = new com.alibaba.fastjson.JSONObject();
+            js.put("type",user1.getType());
+            return toJsonString(js);
         }
         return this.setResponse(ReturnCode.LOGIN_FAIL).toJSONString();
     }

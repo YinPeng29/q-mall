@@ -183,9 +183,9 @@
 						<input type="password" class="form-control" placeholder="密码" id="regist_password1" name="password" />
 						<input type="password" class="form-control" placeholder="确认密码" id="regist_password2" name="confirm_password" />
 						<input type="text" class="form-control" placeholder="邮箱" id="regist_email" name="email" />
-						<input type="text" class="form-control" placeholder="验证码" id="regist_vcode" name="vcode" />
+						 <!--<input type="text" class="form-control" placeholder="验证码" id="regist_vcode" name="vcode" />-->
 						<!--<button id="getVCode" type="button" class="btn btn-success" >获取验证码</button>-->
-						<input id="getVCode" type="button" class="btn btn-success" value="点击发送验证码" onclick="sendCode(this)" />
+						<!--<input id="getVCode" type="button" class="btn btn-success" value="点击发送验证码" onclick="sendCode(this)" />-->
 
 					</div>
 				</form>
@@ -235,15 +235,34 @@
                 dataType: "json",
                 success: function(resp){
                     if(resp.respcode=="0000"){
-                        window.location.href="/index.html";
+                        if(resp.type == "0"){
+							window.location.href="/main.html";
+						}else{
+                            window.location.href="/index.html";
+						}
 					}else{
                         layer.alert("用户或者密码错误!");
 					}
                 }
             });
 		});
-		$("#regist_btn").click(function(){
 
+        var filter=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;   //email 邮箱验证
+		$("#regist_btn").click(function(){
+			console.log("user: "+$("#regist_account").val()+" password :　"+$("#regist_password1").val()+" email: "+$("#email").val());
+			var email = $("#regist_email").val();
+            if(!filter.test(email)){
+                layer.alert("邮箱格式错误");
+                return false;
+            }
+            var pass = $("#regist_password1").val();
+            var rpass = $("#regist_password2").val();
+            if(pass == rpass){
+                $("#user_register").attr("action","/user/save");
+                $("#user_register").submit();
+            }else{
+                alert("两次输入的密码不同");
+            }
 		});
 	</script>
 

@@ -38,7 +38,7 @@
 			<a href="#"><i></i>购物车</a>
 		</div>
 		<div class="topbar-info">
-			<a href="/login2.html" class="link">登录/注册</a>
+			<a href="" class="link" id="current_user"></a>
 			<span class="ver">|</span>
 			<!--<a href="#" class="link">注册</a>-->
 			<!--<span class="ver">|</span>-->
@@ -669,6 +669,7 @@
             laytpl = layui.laytpl;
         });
         console.log(laytpl);
+        getUserInfo();
         itemShow();
     };
 
@@ -694,6 +695,30 @@
                 alert(resp.respmsg);
             }
 		});
+	}
+
+	function getUserInfo(){
+        $.ajax({
+            type: "post",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "/user/queryCurrentUser",//url
+//            traditional:true,
+//            async:false,
+//            data:param,
+            success: function(resp){
+//                layer.alert(resp.respcode);
+                if(resp.respcode == "0000"){
+                    $("#current_user").html("欢迎: "+resp.datas.userName);
+                    $("#current_user").attr("href","/main.html")
+                }else{
+                    $("#current_user").html("登录/注册");
+                    $("#current_user").attr("href","/login2.html")
+				}
+            },
+            error:function(resp){
+                alert(resp.respmsg);
+            }
+        });
 	}
 </script>
 </html>

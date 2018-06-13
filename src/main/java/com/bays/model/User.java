@@ -14,6 +14,7 @@ public class User {
     private Date addTime;
     private Date latest_login_time;
     private String uuid;
+    private String type;
 
     public int getId() {
         return id;
@@ -87,17 +88,27 @@ public class User {
         this.uuid = uuid;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", userId='" + userId + '\'' +
                 ", userName='" + userName + '\'' +
                 ", passWord='" + passWord + '\'' +
                 ", email='" + email + '\'' +
                 ", status=" + status +
                 ", addTime=" + addTime +
                 ", latest_login_time=" + latest_login_time +
-                ", uuid=" + uuid +
+                ", uuid='" + uuid + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 
